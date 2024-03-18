@@ -1,0 +1,123 @@
+/* 
+  Localizable.strings
+  Journal
+
+  Created by Brandon Johns on 3/6/24.
+  
+*/
+
+
+// "Keyword" = "Case"
+// XCode uses the keyword to find and change it to the Case 
+
+
+/* GENERAL STRINGS */
+"OK" = "OK";
+"Cancel" = "Cancel";
+"Delete" = "Delete";
+"Rename" = "Rename";
+"Actions" = "Actions";
+
+
+
+/* MAINVIEW */
+"Filters" = "Filters";
+"Smart Filters" = "Smart Filters";
+"All Entries" = "All Entries";
+"Recent Entries" = "Recent Entries";
+"Topics" = "Topics";
+"Add Topic" = "Add Topic";
+"Show Awards" = "Show Awards";
+
+"Rename Topic" = "Rename Topic";
+"New Name" = "New Name";
+
+
+
+/* CONTENTVIEW */
+"Entries" = "Entries";
+/* A text placeholder, to help users search */
+"Select a Topic or write in the entry name" = "Select a Topic or write in the entry name";
+
+/* CONTENTVIEWTOOLBAR*/
+/* A button that shows a menu with the following options */
+"Filter" = "Filter";
+"Turn Filter On" = "Turn Filter On"; /* Enables filtering */
+"Turn Filter Off" = "Turn Filter Off"; /* Disables filtering */
+"Sort By" = "Sort By"; /* Adjust the order issues are shown */
+"Date Created" = "Date Created"; /* Sort issues by the date they were created */
+"Date Modified" = "Date Modified"; /* Sort issues by the date they were last changed */
+"Newest to Oldest" = "Newest to Oldest"; /* Place newer issues before older issues */
+"Oldest to Newest" = "Oldest to Newest"; /* Place older issues before newer issues */
+"New Entry" = "New Entry";
+"Name" = "Name";
+"All" = "All";
+"Open" = "Open";
+"Closed" = "Closed";
+
+"No Tags" = "No Tags";
+"Locked" = "Locked";
+"Unlocked: %@" = "Unlocked: %@";
+
+"Low" = "Low";
+"Medium" = "Medium";
+"High" = "High";
+
+/* Create a new Entry */
+"New Entry" = "New Entry";
+
+
+/*ENTRYROWS*/
+"No Topics" = "No Topics";
+"Closed" = "Closed";
+"High priority" = "High priority";
+/* Shown as a status for closed issues */
+"CLOSED" = "CLOSED";
+
+
+
+/* DETAILSVIEW */
+"Details" = "Details";
+
+/* NOISSUEVIEW */
+"No Entry Selected" = "No Entry Selected";
+"Copy Entry Name" = "Copy Entry Name";
+
+/* ENTRYVIEW */
+
+"Close Entry" = "Close Entry";
+"Re-open Entry" = "Re-open Entry";
+
+/* Fields that let the users enter details about a specific entry */
+"Enter the entry name here" = "Enter the entry name here";
+"**Modified:** %@" = "**Modified:** %@";
+"**Status:** %@" = "**Status:** %@";
+"Priority" = "Priority";
+"Add Topics" = "Add Topics";
+"Basic Information" = "Basic Information";
+"Description of the entry" = "Description of the entry";
+"Description" = "Description";
+
+
+
+/* AWARDS VIEW */
+"Awards" = "Awards";
+
+
+
+/* DATA */
+"New Topic" = "New Topic";
+"New Entry" = "New Entry";
+
+
+
+/* DEBUG ONLY */
+"ADD SAMPLES" = "ADD SAMPLES";
+
+/* REMINDERS */
+"Reminders" = "Reminders";
+"Show Reminders" = "Show Reminders";
+"Oops!" = "Oops!";
+"There was a problem setting your notification. Please check you have notifications enabled." = "There was a problem setting your notification. Please check you have notifications enabled.";
+"Check Settings" = "Check Settings";
+"Reminder Time" = "Reminder Time";
