@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "E47D93C5-7974-4FB5-BE50-EDD7360A7607",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Journal.xcodeproj",
+      "identifier" : "412780D72B992D3C00EECEBA",
+      "name" : "Journal"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Journal.xcodeproj",
+        "identifier" : "41AD7C672BBCC3AB00800C7D",
+        "name" : "JournalTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -26,16 +26,12 @@ struct MainView: View {
     var body: some View {
         List(selection: $dataController.selectedFilter) {
             Section("Smart Filters") {
-                ForEach(smartFilters) { filter in
-                    NavigationLink(value: filter){
-                        Label(filter.name, systemImage: filter.icon)
-                    }
-                }
+                ForEach(smartFilters, content: SmartFilterRow.init)
             }
             
             Section("Topics") {
                 ForEach(topicFilters) { filter in
-                    SmartFilterRow(filter: filter, rename: rename, delete: delete)
+                    UserFilterRow(filter: filter, rename: rename, delete: delete)
                     
                 }
                 .onDelete(perform: delete)
