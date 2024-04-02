@@ -37,21 +37,6 @@ struct EntryView: View {
                         TopicsMenuView(entry: entry)
                     }
                     
-                    
-                    
-                }
-                
-                Section("Photos") {
-                Toggle("Add a Picture?", isOn: $addPicture)
-                    if addPicture {
-                        PhotoPickerView(entry: entry)
-                            .onSubmit() {
-                                dataController.save()
-                            }
-                }
-                        
-                    
-                    
                 }
                 
                 Section {

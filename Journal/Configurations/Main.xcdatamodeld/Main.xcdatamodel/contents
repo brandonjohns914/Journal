@@ -5,7 +5,6 @@
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="entryDescriptionCoreData" optional="YES" attributeType="String"/>
         <attribute name="entryNameCoreData" optional="YES" attributeType="String"/>
-        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="modificationDate" optional="YES" attributeType="Date" derived="YES" derivationExpression="now()" usesScalarValueType="NO"/>
         <attribute name="priority" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="topics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Topic" inverseName="entries" inverseEntity="Topic"/>

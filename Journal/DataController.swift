@@ -259,19 +259,7 @@ class DataController: ObservableObject {
     }
     
     
-//    func saveImage(image: UIImage) {
-//        let entry = Entry(context: container.viewContext)
-//        entry.entryName = "New Entry"
-//        entry.creationDate = .now
-//        entry.priority = 1
-//        let imageData = image.jpegData(compressionQuality: 0.5)
-//        
-//        selectedEntry = entry
-//        entry.image = imageData
-//        
-//        save()
-//    }
- 
+
     
     func newTopic() {
         let topic = Topic(context: container.viewContext)
