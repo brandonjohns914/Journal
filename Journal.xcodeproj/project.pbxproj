@@ -38,6 +38,7 @@
 		41AD7C752BBCC92500800C7D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41AD7C742BBCC92500800C7D /* Colors.xcassets */; };
 		41AD7C772BBCCC2200800C7D /* TopicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7C762BBCCC2200800C7D /* TopicTests.swift */; };
 		41AD7C792BBCCFB700800C7D /* AwardsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7C782BBCCFB700800C7D /* AwardsTest.swift */; };
+		41AD7C7B2BBCD26000800C7D /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7C7A2BBCD26000800C7D /* DevelopmentTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		41AD7C742BBCC92500800C7D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = "../../../../Documents/Code/Swift/Hacking With Swift/Ulimate/Ultimate Portfolio App/UltimatePortfolio/UltimatePortfolio/Colors.xcassets"; sourceTree = "<group>"; };
 		41AD7C762BBCCC2200800C7D /* TopicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTests.swift; sourceTree = "<group>"; };
 		41AD7C782BBCCFB700800C7D /* AwardsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsTest.swift; sourceTree = "<group>"; };
+		41AD7C7A2BBCD26000800C7D /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				41AD7C722BBCC6EC00800C7D /* AssetTests.swift */,
 				41AD7C762BBCCC2200800C7D /* TopicTests.swift */,
 				41AD7C782BBCCFB700800C7D /* AwardsTest.swift */,
+				41AD7C7A2BBCD26000800C7D /* DevelopmentTests.swift */,
 			);
 			path = JournalTests;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				41AD7C792BBCCFB700800C7D /* AwardsTest.swift in Sources */,
 				41AD7C6B2BBCC3AB00800C7D /* JournalTests.swift in Sources */,
 				41AD7C772BBCCC2200800C7D /* TopicTests.swift in Sources */,
+				41AD7C7B2BBCD26000800C7D /* DevelopmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
