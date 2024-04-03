@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "D4638C3D-EFA5-4B58-B3E0-8784A384E2F5",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Journal.xcodeproj",
+        "identifier" : "412D82F82BBDE90000EB1995",
+        "name" : "JournalUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

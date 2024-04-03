@@ -16,6 +16,7 @@ struct EntryRows: View {
                 Image(systemName: "exclamationmark.circle")
                     .imageScale(.large)
                     .opacity(entry.priority == 2 ? 1 : 0)
+                    .accessibilityIdentifier(entry.priority == 2 ? "\(entry.entryName) High Priority" : "")
                 
                 VStack(alignment: .leading) {
                     Text(entry.entryName)
@@ -42,6 +43,7 @@ struct EntryRows: View {
             }
         }
         .accessibilityHint(entry.priority == 2 ? "High priority" : "")
+        .accessibilityIdentifier(entry.entryName)
     }
 }
 

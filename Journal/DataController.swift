@@ -29,9 +29,9 @@ class DataController: ObservableObject {
     /// Default selected filter to all
     @Published var selectedFilter: Filter? = Filter.all
     
-    /// The selected Entry in the view the user is looking at. 
+    /// The selected Entry in the view the user is looking at.
     @Published var selectedEntry: Entry?
-
+    
     @Published var filterText = ""
     @Published var filterTokens = [Topic]()
     @Published var filterEnabled = false
@@ -61,11 +61,11 @@ class DataController: ObservableObject {
         guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
             fatalError("Failed to locate model file.")
         }
-
+        
         guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
             fatalError("Failed to load model file.")
         }
-
+        
         return managedObjectModel
     }()
     
@@ -89,13 +89,20 @@ class DataController: ObservableObject {
         /// calls remoteStoreChange function anytime a change has happened
         container.persistentStoreDescriptions.first?.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
         NotificationCenter.default.addObserver(forName: .NSPersistentStoreRemoteChange, object: container.persistentStoreCoordinator, queue: .main, using: remoteStoreChanged)
-
+        
         
         /// Loads any memory on the database onto disk.
-        container.loadPersistentStores { storeDescription, error in
-            if let error {
+        container.loadPersistentStores { _, error in
+            if let error = error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
+
+            #if DEBUG
+            if CommandLine.arguments.contains("enable-testing") {
+                self.deleteAll()
+                UIView.setAnimationsEnabled(false)
+            }
+            #endif
         }
     }
     /// Creates sample data that can be used for testing purposes
@@ -125,7 +132,7 @@ class DataController: ObservableObject {
     
     /// for previewing the sample data
     static var preview: DataController = {
-       let dataController = DataController(inMemory: true)
+        let dataController = DataController(inMemory: true)
         dataController.createSampleData()
         return dataController
     }()
@@ -200,7 +207,7 @@ class DataController: ObservableObject {
     func entriesForSelectedFilter() ->  [Entry] {
         let filter = selectedFilter ?? .all
         var predicates = [NSPredicate]()
-       
+        
         if let topic = filter.topic {
             let topicPredicate = NSPredicate(format: "topics CONTAINS %@", topic)
             predicates.append(topicPredicate)
@@ -255,7 +262,7 @@ class DataController: ObservableObject {
         let entry = Entry(context: container.viewContext)
         entry.entryName = "New Entry"
         entry.creationDate = .now
-        entry.priority = 1 
+        entry.priority = 1
         
         if let topic = selectedFilter?.topic {
             entry.addToTopics(topic)
@@ -269,13 +276,13 @@ class DataController: ObservableObject {
     }
     
     
-
+    
     
     func newTopic() {
         let topic = Topic(context: container.viewContext)
         topic.id = UUID()
         topic.name = "New Topic"
-        save() 
+        save()
     }
     /// Counts the fetch requests and removes the optionals
     func count<T>(for fetchRequest: NSFetchRequest<T>) -> Int {
@@ -289,28 +296,28 @@ class DataController: ObservableObject {
             let fetchRequest = Entry.fetchRequest()
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
-
+            
         case "closed":
             // returns true if they closed a certain number of entries
             let fetchRequest = Entry.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "completed = true")
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
-
+            
         case "topics":
             // return true if they created a certain number of topics
             let fetchRequest = Topic.fetchRequest()
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
-
+            
         default:
             // an unknown award criterion; this should never be allowed
             // fatalError("Unknown award criterion: \(award.criterion)")
             return false
         }
     }
-
     
-   
-
+    
+    
+    
 }

@@ -37,13 +37,15 @@ struct AwardsView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .padding()
-                                .frame(width: 100, height: 100)
+                                .frame(width: 80, height: 80)
                                 .foregroundStyle(color(for: award))
                         }
+                        .scaledToFit()
                         .accessibilityLabel(label(for: award))
                         .accessibilityHint(award.description)
                     }
                 }
+                
             }
             .alert(awardTitle, isPresented: $showingAwardDetails) {
                 

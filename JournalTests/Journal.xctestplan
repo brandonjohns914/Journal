@@ -23,6 +23,14 @@
         "identifier" : "41AD7C672BBCC3AB00800C7D",
         "name" : "JournalTests"
       }
+    },
+    {
+      "enabled" : false,
+      "target" : {
+        "containerPath" : "container:Journal.xcodeproj",
+        "identifier" : "412D82F82BBDE90000EB1995",
+        "name" : "JournalUITests"
+      }
     }
   ],
   "version" : 1
