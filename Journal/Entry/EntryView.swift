@@ -11,6 +11,8 @@ struct EntryView: View {
     @EnvironmentObject var dataController: DataController
     @ObservedObject var entry: Entry
     @State private var addPicture = false
+    
+   
     var body: some View {
         
             Form {
