@@ -11,16 +11,16 @@ struct ContentView: View {
     @StateObject var viewModel: ViewModel
     
     var body: some View {
-        List(selection: $viewModel.dataController.selectedEntry) {
+        List(selection: $viewModel.selectedEntry) {
             ForEach(viewModel.dataController.entriesForSelectedFilter()){ entry in
                 EntryRows(entry: entry)
             }
             .onDelete(perform: viewModel.delete)
         }
         .searchable(
-            text: $viewModel.dataController.filterText,
-            tokens: $viewModel.dataController.filterTokens,
-            suggestedTokens: .constant(viewModel.dataController.suggestedFilterTokens),
+            text: $viewModel.filterText,
+            tokens: $viewModel.filterTokens,
+            suggestedTokens: .constant(viewModel.suggestedFilterTokens),
             prompt: "Select a Topic or write in the entry name"
         ) { topic in
             Text(topic.topicName)

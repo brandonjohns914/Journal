@@ -167,9 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				412780DB2B992D3C00EECEBA /* JournalApp.swift */,
-				4178810F2BBF354400BBACF7 /* DataController */,
 				4178810B2BBF323400BBACF7 /* Awards */,
 				417881082BBF31DB00BBACF7 /* ContentView */,
+				4178810F2BBF354400BBACF7 /* DataController */,
 				4178810C2BBF328500BBACF7 /* Entry */,
 				4178810E2BBF351600BBACF7 /* Filter */,
 				417881072BBF31CE00BBACF7 /* MainView */,

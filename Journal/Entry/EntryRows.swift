@@ -19,11 +19,11 @@ struct EntryRows: View {
                     .accessibilityIdentifier(viewModel.iconIdentifier)
                 
                 VStack(alignment: .leading) {
-                    Text(viewModel.entry.entryName)
+                    Text(viewModel.entryName)
                         .font(.headline)
                         .lineLimit(1)
                     
-                    Text(viewModel.entry.entryTopicsList)
+                    Text(viewModel.entryTopicsList)
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                 }
@@ -34,7 +34,7 @@ struct EntryRows: View {
                         .accessibilityLabel(viewModel.accessibilityCreationDate)
                         .font(.subheadline)
                     
-                    if viewModel.entry.completed {
+                    if viewModel.completed {
                         Text("Closed")
                             .font(.body.smallCaps())
                     }

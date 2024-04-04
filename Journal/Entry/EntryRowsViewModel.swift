@@ -8,6 +8,7 @@
 import Foundation
 
 extension EntryRows {
+    @dynamicMemberLookup
     class ViewModel: ObservableObject {
         let entry: Entry
         
@@ -35,5 +36,9 @@ extension EntryRows {
             self.entry = entry
         }
         
+        // Connect directly to the Entry so viewModel can access the properties 
+        subscript<Value>(dynamicMember keyPath: KeyPath<Entry, Value>) -> Value {
+            entry[keyPath: keyPath]
+        }
     }
 }
