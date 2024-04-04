@@ -45,6 +45,6 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
-        .environmentObject(DataController.preview)
+    MainView(dataController: .preview)
+        
 }

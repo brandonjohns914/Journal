@@ -10,11 +10,13 @@ import Foundation
 import SwiftUI
 
 extension MainView {
-    class ViewModel: ObservableObject {
+    class ViewModel: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
         
         var dataController: DataController
         
-        @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var topics: FetchedResults<Topic>
+        /// Fetching updating changes so the View cannot see it
+        private let topicsController: NSFetchedResultsController<Topic>
+        @Published var topics = [Topic]()
         
         @Published var topicToRename: Topic?
         @Published var renamingTopic = false
@@ -29,6 +31,31 @@ extension MainView {
         
         init(dataController: DataController) {
             self.dataController = dataController
+            
+            let request = Topic.fetchRequest()
+            request.sortDescriptors = [NSSortDescriptor(keyPath: \Topic.name, ascending: true)]
+            
+            
+            // get the fetch request 
+            topicsController = NSFetchedResultsController(
+                fetchRequest: request,
+                managedObjectContext: dataController.container.viewContext,
+                sectionNameKeyPath: nil,
+                cacheName: nil
+            )
+            // NSObject requirement
+            super.init()
+            
+            // tell me when core data has updated
+            topicsController.delegate = self
+            
+            do {
+                try topicsController.performFetch()
+                
+                topics = topicsController.fetchedObjects ?? []
+            } catch {
+                print("failed to fetch topics")
+            }
         }
         
         func delete(_ offsets: IndexSet) {

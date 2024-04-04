@@ -14,7 +14,7 @@ struct JournalApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationSplitView {
-                MainView()
+                MainView(dataController: dataController)
             } content: {
                 ContentView()
             } detail: {
