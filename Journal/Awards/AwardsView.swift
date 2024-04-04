@@ -16,7 +16,7 @@ struct AwardsView: View {
         [GridItem(.adaptive(minimum: 100, maximum: 100))]
     }
     
-    var awardTitle: String {
+    var awardTitle: LocalizedStringKey {
         if dataController.hasEarned(award: selectedAward) {
             return "Unlocked: \(selectedAward.name)"
         } else {

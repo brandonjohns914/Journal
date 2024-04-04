@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         List(selection: $viewModel.selectedEntry) {
-            ForEach(viewModel.dataController.entriesForSelectedFilter()){ entry in
+            ForEach(viewModel.dataController.entriesForSelectedFilter()) { entry in
                 EntryRows(entry: entry)
             }
             .onDelete(perform: viewModel.delete)

@@ -11,10 +11,11 @@ extension Entry {
     
     /// Creates an array of all the topics by their name
     var entryTopicsList: String {
-        guard let topics else {return "No Topics"}
+        let noTopics = NSLocalizedString("No Topics", comment: "The user has not created any topics yet.")
+        guard let topics else {return noTopics}
         
         if topics.count == 0 {
-            return "No Topics"
+            return noTopics
         } else {
             return entryTopics.map(\.topicName).formatted()
         }
@@ -22,9 +23,9 @@ extension Entry {
     
     var entryStatus: String {
         if completed {
-            return "Finished"
+            return NSLocalizedString("Finished", comment: "This entry has been fished by the user.")
         } else {
-            return "Still Working"
+            return NSLocalizedString("Still Working", comment: "This entry is currently unfinished.")
         }
     }
     

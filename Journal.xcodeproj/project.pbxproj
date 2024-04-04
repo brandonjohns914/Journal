@@ -205,7 +205,6 @@
 		412780F22B992F6500EECEBA /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				412780F02B992EEF00EECEBA /* Awards.json */,
 				412780EE2B992EE900EECEBA /* Localizable.strings */,
 			);
 			path = Localization;
@@ -269,6 +268,7 @@
 		4178810B2BBF323400BBACF7 /* Awards */ = {
 			isa = PBXGroup;
 			children = (
+				412780F02B992EEF00EECEBA /* Awards.json */,
 				414F5E952BA0DAC60098C784 /* Award.swift */,
 				414F5E972BA0DCB10098C784 /* AwardsView.swift */,
 			);
