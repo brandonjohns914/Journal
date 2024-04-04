@@ -16,7 +16,7 @@ struct JournalApp: App {
             NavigationSplitView {
                 MainView(dataController: dataController)
             } content: {
-                ContentView()
+                ContentView(dataController: dataController)
             } detail: {
                 DetailView()
             }
