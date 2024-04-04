@@ -8,67 +8,40 @@
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject  var dataController: DataController
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var topics: FetchedResults<Topic>
-    
-    @State private var topicToRename: Topic?
-    @State private var renamingTopic = false
-    @State private var topicName = ""
-    
-    
-    var topicFilters: [Filter] {
-        topics.map{ topic in
-            Filter(id: topic.topicID, name: topic.topicName, icon: "pencil.line", topic: topic)
-        }
-    }
+    @StateObject private var viewModel: ViewModel
     
     let smartFilters: [Filter] = [.all, .recent]
+    
+    init(dataController: DataController) {
+        let viewModel = ViewModel(dataController: dataController)
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
-        List(selection: $dataController.selectedFilter) {
+        List(selection: $viewModel.dataController.selectedFilter) {
             Section("Smart Filters") {
                 ForEach(smartFilters, content: SmartFilterRow.init)
             }
             
             Section("Topics") {
-                ForEach(topicFilters) { filter in
-                    UserFilterRow(filter: filter, rename: rename, delete: delete)
+                ForEach(viewModel.topicFilters) { filter in
+                    UserFilterRow(filter: filter, rename: viewModel.rename, delete: viewModel.delete)
                     
                 }
-                .onDelete(perform: delete)
+                .onDelete(perform: viewModel.delete)
                 
             }
         }
-        .alert("Rename Topic", isPresented: $renamingTopic) {
-            Button("OK", action: completeRename)
+        .alert("Rename Topic", isPresented: $viewModel.renamingTopic) {
+            Button("OK", action: viewModel.completeRename)
             Button("Cancel", role: .cancel) {}
-            TextField("New Name", text: $topicName)
+            TextField("New Name", text: $viewModel.topicName)
         }
         .toolbar(content: MainViewToolbar.init)
         .navigationTitle("Filters")
     }
     
-    func delete(_ offsets: IndexSet) {
-        for offset in offsets {
-            let item = topics[offset]
-            dataController.delete(item)
-        }
-    }
-    func delete(_ filter: Filter) {
-        guard let topic = filter.topic else {return}
-        dataController.delete(topic)
-        dataController.save()
-    }
-    
-    func rename(_ filter: Filter){
-        topicToRename = filter.topic
-        topicName = filter.name
-        renamingTopic = true
-    }
-    
-    func completeRename() {
-        topicToRename?.name = topicName
-        dataController.save()
-    }
+   
 }
 
 #Preview {
