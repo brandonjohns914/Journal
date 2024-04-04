@@ -36,7 +36,7 @@ extension MainView {
             request.sortDescriptors = [NSSortDescriptor(keyPath: \Topic.name, ascending: true)]
             
             
-            // get the fetch request 
+            // get the fetch request
             topicsController = NSFetchedResultsController(
                 fetchRequest: request,
                 managedObjectContext: dataController.container.viewContext,
@@ -79,6 +79,13 @@ extension MainView {
         func completeRename() {
             topicToRename?.name = topicName
             dataController.save()
+        }
+        
+        
+        func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+            if let newTopics = controller.fetchedObjects as? [Topic] {
+                topics = newTopics
+            }
         }
     }
 }
