@@ -9,32 +9,32 @@ import SwiftUI
 
 struct EntryRows: View {
     @EnvironmentObject var dataController: DataController
-    @ObservedObject var entry: Entry
+    @StateObject var viewModel: ViewModel
     var body: some View {
-        NavigationLink(value: entry) {
+        NavigationLink(value: viewModel.entry) {
             HStack {
                 Image(systemName: "exclamationmark.circle")
                     .imageScale(.large)
-                    .opacity(entry.priority == 2 ? 1 : 0)
-                    .accessibilityIdentifier(entry.priority == 2 ? "\(entry.entryName) High Priority" : "")
+                    .opacity(viewModel.iconOpactiy)
+                    .accessibilityIdentifier(viewModel.iconIdentifier)
                 
                 VStack(alignment: .leading) {
-                    Text(entry.entryName)
+                    Text(viewModel.entry.entryName)
                         .font(.headline)
                         .lineLimit(1)
                     
-                    Text("No Topics")
+                    Text(viewModel.entry.entryTopicsList)
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                 }
                 Spacer()
                 
                 VStack(alignment: .trailing) {
-                    Text(entry.entryCreationDate.formatted(date: .abbreviated, time: .omitted))
-                        .accessibilityLabel(entry.entryCreationDate.formatted(date: .abbreviated, time: .omitted))
+                    Text(viewModel.creationDate)
+                        .accessibilityLabel(viewModel.accessibilityCreationDate)
                         .font(.subheadline)
                     
-                    if entry.completed {
+                    if viewModel.entry.completed {
                         Text("Closed")
                             .font(.body.smallCaps())
                     }
@@ -42,9 +42,15 @@ struct EntryRows: View {
                 .foregroundStyle(.secondary)
             }
         }
-        .accessibilityHint(entry.priority == 2 ? "High priority" : "")
-        .accessibilityIdentifier(entry.entryName)
+        .accessibilityHint(viewModel.accessibilityHint)
+        .accessibilityIdentifier(viewModel.entry.entryName)
     }
+    
+    init(entry: Entry) {
+        let viewModel = ViewModel(entry: entry)
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
 }
 
 #Preview {
