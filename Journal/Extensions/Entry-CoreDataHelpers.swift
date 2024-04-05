@@ -51,6 +51,11 @@ extension Entry {
         modificationDate ?? .now
     }
     
+    var entryReminderTime: Date {
+        get {reminderTime ?? .now }
+        set { reminderTime = newValue }
+    }
+    
     static var example: Entry {
         let controller = DataController(inMemory: true)
         
