@@ -28,6 +28,9 @@ class DataController: ObservableObject {
     
     var spotlightDelegate: NSCoreDataCoreSpotlightDelegate?
     
+    /// The UserDefaults suite where we're saving user data.
+    let defaults: UserDefaults
+    
     /// Default selected filter to all
     @Published var selectedFilter: Filter? = Filter.all
     
@@ -46,7 +49,7 @@ class DataController: ObservableObject {
     
     /// To stop over saving to save hardware resources
     private var saveTask: Task<Void, Error>?
-    
+    private var storeTask: Task<Void, Never>?
     
     var suggestedFilterTokens: [Topic] {
         let trimmedFilterText = String(filterText).trimmingCharacters(in: .whitespaces)
@@ -75,8 +78,14 @@ class DataController: ObservableObject {
     
     /// Initializer to load Main (data model) for previewing
     /// - Parameter inMemory: when true memory is created and when false memory is created on disk
-    init(inMemory: Bool = false) {
+    /// - Parameter defaults: The UserDefaults suite where user data should be stored
+    init(inMemory: Bool = false, defaults: UserDefaults = .standard) {
+        self.defaults = defaults
         container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
+        
+        storeTask = Task {
+            await monitorTransactions()
+        }
         
         if inMemory {
             /// Writes the memory to nowhere
@@ -293,12 +302,25 @@ class DataController: ObservableObject {
     
     
     
-    func newTopic() {
+    func newTopic() -> Bool {
+        var shouldCreate = fullVersionUnlocked
+        
+        if shouldCreate == false {
+            // check how many topics we currently have
+            shouldCreate = count(for: Topic.fetchRequest()) < 3
+        }
+        
+        guard shouldCreate else {
+            return false
+        }
+        
         let topic = Topic(context: container.viewContext)
         topic.id = UUID()
         topic.name = "New Topic"
         save()
+        return true 
     }
+    
     /// Counts the fetch requests and removes the optionals
     func count<T>(for fetchRequest: NSFetchRequest<T>) -> Int {
         (try? container.viewContext.count(for: fetchRequest)) ?? 0
@@ -346,3 +368,13 @@ class DataController: ObservableObject {
     
     
 }
+
+    /*
+     // before inapp purchases
+     func newTopic() {
+         let topic = Topic(context: container.viewContext)
+         topic.id = UUID()
+         topic.name = "New Topic"
+         save()
+     }
+     */

@@ -51,7 +51,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4138DEBF2BBDD8A400513DF7"
+               BlueprintIdentifier = "412D82F82BBDE90000EB1995"
                BuildableName = "JournalUITests.xctest"
                BlueprintName = "JournalUITests"
                ReferencedContainer = "container:Journal.xcodeproj">
@@ -90,6 +90,9 @@
             ReferencedContainer = "container:Journal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <StoreKitConfigurationFileReference
+         identifier = "../../Journal/Configurations/Configuration.storekit">
+      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
