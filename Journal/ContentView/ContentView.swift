@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.requestReview) var requestReview
     @StateObject var viewModel: ViewModel
     
     var body: some View {
@@ -29,13 +30,19 @@ struct ContentView: View {
         ContentViewToolbar()
         }
         .navigationTitle("Entries")
+        .onAppear(perform: askForReview)
     }
     
     init(dataController: DataController) {
         let viewModel = ViewModel(dataController: dataController)
         _viewModel = StateObject(wrappedValue: viewModel)
     }
-      
+    
+    func askForReview() {
+        if viewModel.shouldRequestReview {
+            requestReview()
+        }
+    }
 }
 
 #Preview {

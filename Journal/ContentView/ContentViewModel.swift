@@ -13,6 +13,10 @@ extension ContentView {
     class ViewModel: ObservableObject {
         var dataController: DataController
         
+        var shouldRequestReview: Bool {
+            dataController.count(for: Topic.fetchRequest() ) >= 5
+        }
+        
         init(dataController: DataController) {
             self.dataController = dataController
         }

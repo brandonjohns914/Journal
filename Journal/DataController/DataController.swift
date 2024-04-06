@@ -9,6 +9,8 @@ import Foundation
 import CoreData
 import PhotosUI
 import SwiftUI
+import StoreKit
+
 
 enum SortType: String {
     case dateCreated = "creationDate"
@@ -30,6 +32,9 @@ class DataController: ObservableObject {
     
     /// The UserDefaults suite where we're saving user data.
     let defaults: UserDefaults
+    
+    ///StoreKit products loaded for the store
+    @Published var products = [Product]()
     
     /// Default selected filter to all
     @Published var selectedFilter: Filter? = Filter.all
@@ -347,6 +352,9 @@ class DataController: ObservableObject {
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
             
+        case "unlock":
+            return fullVersionUnlocked
+
         default:
             // an unknown award criterion; this should never be allowed
             // fatalError("Unknown award criterion: \(award.criterion)")

@@ -8,6 +8,9 @@
 import Foundation
 import StoreKit
 
+
+
+
 extension DataController {
     /// The product ID for premium unlock
     
@@ -60,5 +63,14 @@ extension DataController {
         }
     }
 
- 
+    @MainActor
+    func loadProducts() async throws {
+        // don't load products more than once
+        guard products.isEmpty else { return }
+
+        try await Task.sleep(for: .seconds(0.2))
+        products = try await Product.products(for: [Self.unlockPremiumProductID])
+    }
+    
+    
 }
