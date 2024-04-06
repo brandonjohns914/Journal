@@ -15,6 +15,10 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>BJ914.Journal.newEntry</string>
+	</array>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>

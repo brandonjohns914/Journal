@@ -11,6 +11,8 @@ struct ContentView: View {
     @Environment(\.requestReview) var requestReview
     @StateObject var viewModel: ViewModel
     
+    private let newEntryActivity = "BJ914.Journal.newEntry"
+    
     var body: some View {
         List(selection: $viewModel.selectedEntry) {
             ForEach(viewModel.dataController.entriesForSelectedFilter()) { entry in
@@ -32,6 +34,11 @@ struct ContentView: View {
         .navigationTitle("Entries")
         .onAppear(perform: askForReview)
         .onOpenURL(perform: openURL)
+        .userActivity(newEntryActivity) { activity in
+            activity.isEligibleForPrediction = true
+            activity.title = "New Entry"
+        }
+        .onContinueUserActivity(newEntryActivity, perform: resumeActivity)
     }
     
     init(dataController: DataController) {
@@ -49,6 +56,10 @@ struct ContentView: View {
         if url.absoluteString.contains("newEntry") {
             viewModel.dataController.newEntry()
         }
+    }
+    
+    func resumeActivity(_ userActivity: NSUserActivity) {
+        viewModel.dataController.newEntry()
     }
 }
 
