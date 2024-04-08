@@ -9,7 +9,7 @@ import Foundation
 import UserNotifications
 
 extension DataController {
-    func addReminder(for entry: Entry) async -> Bool {
+    func addReminder(for entry: EntryJournal) async -> Bool {
         do {
               let center = UNUserNotificationCenter.current()
             
@@ -41,7 +41,7 @@ extension DataController {
           }
     }
     
-    func removeReminders(for entry: Entry) {
+    func removeReminders(for entry: EntryJournal) {
         let center = UNUserNotificationCenter.current()
             let id = entry.objectID.uriRepresentation().absoluteString
             center.removePendingNotificationRequests(withIdentifiers: [id])
@@ -54,7 +54,7 @@ extension DataController {
 
     }
     
-    private func placeReminders(for entry: Entry) async throws {
+    private func placeReminders(for entry: EntryJournal) async throws {
         let content = UNMutableNotificationContent()
         content.sound = .default
         content.title = entry.entryName

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Entry {
+extension EntryJournal {
     
     /// Creates an array of all the topics by their name
     var entryTopicsList: String {
@@ -56,12 +56,12 @@ extension Entry {
         set { reminderTime = newValue }
     }
     
-    static var example: Entry {
+    static var example: EntryJournal {
         let controller = DataController(inMemory: true)
         
         let viewContext = controller.container.viewContext
         
-        let entry = Entry(context: viewContext)
+        let entry = EntryJournal(context: viewContext)
         entry.entryName = "Example Entry"
         entry.entryDescription = "This is an example entry"
         entry.priority = 2
@@ -70,8 +70,8 @@ extension Entry {
     }
 }
 
-extension Entry: Comparable {
-    public static func < (lhs: Entry, rhs: Entry) -> Bool {
+extension EntryJournal: Comparable {
+    public static func < (lhs: EntryJournal, rhs: EntryJournal) -> Bool {
         let left = lhs.entryName.localizedLowercase
         let right = rhs.entryName.localizedLowercase
         

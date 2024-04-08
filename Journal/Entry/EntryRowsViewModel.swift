@@ -10,7 +10,7 @@ import Foundation
 extension EntryRows {
     @dynamicMemberLookup
     class ViewModel: ObservableObject {
-        let entry: Entry
+        let entry: EntryJournal
         
         var iconOpactiy: Double {
             entry.priority == 2 ? 1 : 0
@@ -32,12 +32,12 @@ extension EntryRows {
             entry.entryCreationDate.formatted(date: .abbreviated, time: .omitted)
         }
         
-        init(entry: Entry) {
+        init(entry: EntryJournal) {
             self.entry = entry
         }
         
         // Connect directly to the Entry so viewModel can access the properties 
-        subscript<Value>(dynamicMember keyPath: KeyPath<Entry, Value>) -> Value {
+        subscript<Value>(dynamicMember keyPath: KeyPath<EntryJournal, Value>) -> Value {
             entry[keyPath: keyPath]
         }
     }

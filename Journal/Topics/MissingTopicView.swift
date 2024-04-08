@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MissingTopicView: View {
     @EnvironmentObject var dataController: DataController
-    @ObservedObject var entry: Entry
+    @ObservedObject var entry: EntryJournal
     var body: some View {
         //unselected Topics
         

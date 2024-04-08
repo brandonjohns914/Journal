@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EntryView: View {
     @EnvironmentObject var dataController: DataController
-    @ObservedObject var entry: Entry
+    @ObservedObject var entry: EntryJournal
     @State private var showingNotificationsError = false
     @Environment(\.openURL) var openURL
     

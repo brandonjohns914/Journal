@@ -10,6 +10,7 @@ import CoreData
 import PhotosUI
 import SwiftUI
 import StoreKit
+import WidgetKit
 
 
 enum SortType: String {
@@ -40,7 +41,7 @@ class DataController: ObservableObject {
     @Published var selectedFilter: Filter? = Filter.all
     
     /// The selected Entry in the view the user is looking at.
-    @Published var selectedEntry: Entry?
+    @Published var selectedEntry: EntryJournal?
     
     @Published var filterText = ""
     @Published var filterTokens = [Topic]()
@@ -92,9 +93,18 @@ class DataController: ObservableObject {
             await monitorTransactions()
         }
         
+        
+        /// For Testing and previewing purposes, we create a
+        /// temporary, in-memory database by writting to /dev/null
+        /// so our data is destroied after the app finishes running
         if inMemory {
             /// Writes the memory to nowhere
             container.persistentStoreDescriptions.first?.url = URL(filePath: "/dev/null")
+        } else {
+            let groupID = "group.BJ914.Journal"
+            if let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: groupID) {
+                container.persistentStoreDescriptions.first?.url = url.appending(path: "Main.sqlite")
+            }
         }
         
         ///Combines local and remote changes
@@ -103,8 +113,25 @@ class DataController: ObservableObject {
         container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         
         /// calls remoteStoreChange function anytime a change has happened
-        container.persistentStoreDescriptions.first?.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
-        NotificationCenter.default.addObserver(forName: .NSPersistentStoreRemoteChange, object: container.persistentStoreCoordinator, queue: .main, using: remoteStoreChanged)
+        /// watches iCloud for all changes to male sure local UI is
+        /// in sync when remote changes happen
+        container.persistentStoreDescriptions.first?.setOption(
+            true as NSNumber,
+            forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey
+        )
+        
+        container.persistentStoreDescriptions.first?.setOption(
+            true as NSNumber,
+            forKey: NSPersistentHistoryTrackingKey
+        )
+        
+        
+        NotificationCenter.default.addObserver(
+            forName: .NSPersistentStoreRemoteChange,
+            object: container.persistentStoreCoordinator,
+            queue: .main,
+            using: remoteStoreChanged
+        )
         
         
         /// Loads any memory on the database onto disk.
@@ -146,7 +173,7 @@ class DataController: ObservableObject {
             topic.name = "Topic \(topicIndex)"
             
             for entryIndex in 1...10 {
-                let entry = Entry(context: viewContext)
+                let entry = EntryJournal(context: viewContext)
                 entry.entryNameCoreData = "Entry \(topicIndex)-\(entryIndex)"
                 entry.entryDescriptionCoreData = "Description of the Topic goes here"
                 entry.creationDate = .now
@@ -172,6 +199,8 @@ class DataController: ObservableObject {
         
         if container.viewContext.hasChanges {
             try? container.viewContext.save()
+            /// forces all widget to update 
+            WidgetCenter.shared.reloadAllTimelines()
         }
     }
     
@@ -212,7 +241,7 @@ class DataController: ObservableObject {
         let request1: NSFetchRequest<NSFetchRequestResult> = Topic.fetchRequest()
         delete(request1)
         
-        let request2: NSFetchRequest<NSFetchRequestResult> = Entry.fetchRequest()
+        let request2: NSFetchRequest<NSFetchRequestResult> = EntryJournal.fetchRequest()
         delete(request2)
     }
     
@@ -221,7 +250,7 @@ class DataController: ObservableObject {
     }
     
     /// Sorts all the topics and computes which topics arent assigned to the entry
-    func missingTopics(from entry: Entry) -> [Topic] {
+    func missingTopics(from entry: EntryJournal) -> [Topic] {
         let request = Topic.fetchRequest()
         let allTopics = (try? container.viewContext.fetch(request)) ?? []
         
@@ -233,7 +262,7 @@ class DataController: ObservableObject {
     
     /// Creates an entry predicate array that sorts and filters based on
     /// topic, modificationdate, name, desciption, priority, and completed.
-    func entriesForSelectedFilter() ->  [Entry] {
+    func entriesForSelectedFilter() ->  [EntryJournal] {
         let filter = selectedFilter ?? .all
         var predicates = [NSPredicate]()
         
@@ -273,7 +302,7 @@ class DataController: ObservableObject {
             }
         }
         
-        let request = Entry.fetchRequest()
+        let request = EntryJournal.fetchRequest()
         request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         
         let newestFirstSortDescriptor = NSSortDescriptor(key: sortType.rawValue, ascending: sortNewestFirst)
@@ -288,7 +317,7 @@ class DataController: ObservableObject {
     }
     
     func newEntry() {
-        let entry = Entry(context: container.viewContext)
+        let entry = EntryJournal(context: container.viewContext)
         entry.entryName = "New Entry"
         entry.creationDate = .now
         entry.priority = 1
@@ -330,39 +359,8 @@ class DataController: ObservableObject {
     func count<T>(for fetchRequest: NSFetchRequest<T>) -> Int {
         (try? container.viewContext.count(for: fetchRequest)) ?? 0
     }
-    
-    func hasEarned(award: Award) -> Bool {
-        switch award.criterion {
-        case "entries":
-            // returns true if they added a certain number of entries
-            let fetchRequest = Entry.fetchRequest()
-            let awardCount = count(for: fetchRequest)
-            return awardCount >= award.value
-            
-        case "closed":
-            // returns true if they closed a certain number of entries
-            let fetchRequest = Entry.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "completed = true")
-            let awardCount = count(for: fetchRequest)
-            return awardCount >= award.value
-            
-        case "topics":
-            // return true if they created a certain number of topics
-            let fetchRequest = Topic.fetchRequest()
-            let awardCount = count(for: fetchRequest)
-            return awardCount >= award.value
-            
-        case "unlock":
-            return fullVersionUnlocked
-
-        default:
-            // an unknown award criterion; this should never be allowed
-            // fatalError("Unknown award criterion: \(award.criterion)")
-            return false
-        }
-    }
-    
-    func entry(with uniqueIdentifier: String) -> Entry? {
+   
+    func entry(with uniqueIdentifier: String) -> EntryJournal? {
         guard let url = URL(string: uniqueIdentifier) else {
             return nil
         }
@@ -371,9 +369,25 @@ class DataController: ObservableObject {
             return nil
         }
 
-        return try? container.viewContext.existingObject(with: id) as? Entry
+        return try? container.viewContext.existingObject(with: id) as? EntryJournal
     }
     
+    
+    func fetchRequestForTopEntries(count: Int) -> NSFetchRequest<EntryJournal> {
+        let request = EntryJournal.fetchRequest()
+        request.predicate = NSPredicate(format: "completed = false")
+        
+        request.sortDescriptors = [
+               NSSortDescriptor(keyPath: \EntryJournal.priority, ascending: false)
+           ]
+
+           request.fetchLimit = count
+           return request
+    }
+    
+    func results<T: NSManagedObject>(for fetchRequest: NSFetchRequest<T>) -> [T] {
+        return (try? container.viewContext.fetch(fetchRequest)) ?? []
+    }
     
 }
 

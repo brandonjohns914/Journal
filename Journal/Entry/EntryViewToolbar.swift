@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EntryViewToolbar: View {
     @EnvironmentObject var dataController: DataController
-    @ObservedObject var entry: Entry
+    @ObservedObject var entry: EntryJournal
     
     @State private var engine = try? CHHapticEngine()
     
@@ -86,7 +86,7 @@ struct EntryViewToolbar: View {
 }
 
 #Preview {
-    EntryViewToolbar(entry: Entry.example)
+    EntryViewToolbar(entry: EntryJournal.example)
 }
 
 

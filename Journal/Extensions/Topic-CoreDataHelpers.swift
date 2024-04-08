@@ -10,14 +10,14 @@ import Foundation
 extension Topic {
     
     /// filters all active entries the ones that havent been completed
-    var topicActiveEntries: [Entry] {
-        let result = entries?.allObjects as? [Entry] ?? []
+    var topicActiveEntries: [EntryJournal] {
+        let result = entries?.allObjects as? [EntryJournal] ?? []
         return result.filter { $0.completed == false}
     }
     
     /// returns all entries assicated wtih that Topic
-    var topicEntries: [Entry] {
-        let result = entries?.allObjects as? [Entry] ?? []
+    var topicEntries: [EntryJournal] {
+        let result = entries?.allObjects as? [EntryJournal] ?? []
         return result.sorted()
     }
     var topicID: UUID {

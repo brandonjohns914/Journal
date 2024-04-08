@@ -46,7 +46,7 @@ struct EntryRows: View {
         .accessibilityIdentifier(viewModel.entry.entryName)
     }
     
-    init(entry: Entry) {
+    init(entry: EntryJournal) {
         let viewModel = ViewModel(entry: entry)
         _viewModel = StateObject(wrappedValue: viewModel)
     }
