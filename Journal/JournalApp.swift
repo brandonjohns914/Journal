@@ -8,21 +8,18 @@
 import CoreSpotlight
 import SwiftUI
 
+import LocalAuthentication
+
 @main
 struct JournalApp: App {
-    @Environment(\.scenePhase) var scenePhase
+    
     @StateObject var dataController = DataController()
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @Environment(\.scenePhase) var scenePhase
+    
     
     var body: some Scene {
         WindowGroup {
-            NavigationSplitView {
-                MainView(dataController: dataController)
-            } content: {
-                ContentView(dataController: dataController)
-            } detail: {
-                DetailView()
-            }
+            FaceIDAuthentication(dataController: dataController)
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
             .onChange(of: scenePhase) {_, phase in
@@ -33,10 +30,16 @@ struct JournalApp: App {
             .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
         }
     }
+    
     func loadSpotlightItem(_ userActivity: NSUserActivity) {
         if let uniqueIdentifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
             dataController.selectedEntry = dataController.entry(with: uniqueIdentifier)
             dataController.selectedFilter = .all
         }
     }
+    
+    
 }
+
+
+

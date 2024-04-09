@@ -66,6 +66,8 @@
 		41B0FA7D2BC487A800263C8B /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781192B9A61C400EECEBA /* Filter.swift */; };
 		41B0FA802BC487EF00263C8B /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881172BC0CED100BBACF7 /* DataController-StoreKit.swift */; };
 		41B0FA822BC4886300263C8B /* DataController-Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA812BC4886200263C8B /* DataController-Awards.swift */; };
+		41B0FAAD2BC5DB4200263C8B /* FaceIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FAAC2BC5DB4200263C8B /* FaceIDAuthentication.swift */; };
+		41B0FAAF2BC5DB4E00263C8B /* FaceIDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FAAE2BC5DB4E00263C8B /* FaceIDViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +172,8 @@
 		41B0FA712BC4861D00263C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41B0FA812BC4886200263C8B /* DataController-Awards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Awards.swift"; sourceTree = "<group>"; };
 		41B0FA832BC489A100263C8B /* JournalWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalWidgetExtension.entitlements; sourceTree = "<group>"; };
+		41B0FAAC2BC5DB4200263C8B /* FaceIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDAuthentication.swift; sourceTree = "<group>"; };
+		41B0FAAE2BC5DB4E00263C8B /* FaceIDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				412780DB2B992D3C00EECEBA /* JournalApp.swift */,
+				41B0FAB02BC5DDA700263C8B /* Authentication */,
 				4158638B2BC1F2AE00741128 /* QuickAction */,
 				4178810B2BBF323400BBACF7 /* Awards */,
 				417881082BBF31DB00BBACF7 /* ContentView */,
@@ -443,6 +448,15 @@
 			path = JournalWidget;
 			sourceTree = "<group>";
 		};
+		41B0FAB02BC5DDA700263C8B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				41B0FAAC2BC5DB4200263C8B /* FaceIDAuthentication.swift */,
+				41B0FAAE2BC5DB4E00263C8B /* FaceIDViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -626,6 +640,7 @@
 				41AC04092BA2709E001DAB12 /* EntryViewToolbar.swift in Sources */,
 				417881152BC0AE8300BBACF7 /* DataController-Notifications.swift in Sources */,
 				412781232B9A8BCC00EECEBA /* NoEntryView.swift in Sources */,
+				41B0FAAD2BC5DB4200263C8B /* FaceIDAuthentication.swift in Sources */,
 				414F5E982BA0DCB10098C784 /* AwardsView.swift in Sources */,
 				412781212B9A869600EECEBA /* EntryRows.swift in Sources */,
 				412781142B9A52AB00EECEBA /* DataController.swift in Sources */,
@@ -633,6 +648,7 @@
 				41AC040B2BA27129001DAB12 /* TopicsMenuView.swift in Sources */,
 				412781162B9A616C00EECEBA /* MainView.swift in Sources */,
 				41AD7C5F2BBCBDB100800C7D /* UserFilterRow.swift in Sources */,
+				41B0FAAF2BC5DB4E00263C8B /* FaceIDViewModel.swift in Sources */,
 				417881182BC0CED100BBACF7 /* DataController-StoreKit.swift in Sources */,
 				412780DC2B992D3C00EECEBA /* JournalApp.swift in Sources */,
 				414F5E962BA0DAC60098C784 /* Award.swift in Sources */,
@@ -831,6 +847,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Journal/Configurations/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Need to use Face ID to unlock your journal.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -872,6 +889,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Journal/Configurations/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Need to use Face ID to unlock your journal.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -990,6 +1008,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JournalWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = JournalWidget;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please Authenticate yourself to view the journal";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1020,6 +1039,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JournalWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = JournalWidget;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please Authenticate yourself to view the journal";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
