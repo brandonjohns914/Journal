@@ -153,12 +153,12 @@ class DataController: ObservableObject {
                 }
             }
 
-            #if DEBUG
-            if CommandLine.arguments.contains("enable-testing") {
-                self?.deleteAll()
-                UIView.setAnimationsEnabled(false)
-            }
-            #endif
+//            #if DEBUG
+//            if CommandLine.arguments.contains("enable-testing") {
+//                self?.deleteAll()
+//                UIView.setAnimationsEnabled(false)
+//            }
+//            #endif
         }
     }
     /// Creates sample data that can be used for testing purposes
@@ -167,12 +167,12 @@ class DataController: ObservableObject {
         /// only adds them to persistent storaged when asked to.
         let viewContext = container.viewContext
         
-        for topicIndex in 1...5 {
+        for topicIndex in 1...3 {
             let topic = Topic(context: viewContext)
             topic.id = UUID()
             topic.name = "Topic \(topicIndex)"
             
-            for entryIndex in 1...10 {
+            for entryIndex in 1...5 {
                 let entry = EntryJournal(context: viewContext)
                 entry.entryNameCoreData = "Entry \(topicIndex)-\(entryIndex)"
                 entry.entryDescriptionCoreData = "Description of the Topic goes here"

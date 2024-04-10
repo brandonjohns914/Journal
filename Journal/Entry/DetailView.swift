@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailView: View {
     @EnvironmentObject var dataController: DataController
     var body: some View {
-        Group {
+        
             VStack {
                 if let entry = dataController.selectedEntry {
                     EntryView(entry: entry)
@@ -20,9 +20,8 @@ struct DetailView: View {
             }
             .navigationTitle("Details")
             .navigationBarTitleDisplayMode(.inline)
-        }
-        .background(LinearGradient(colors: [.blue, .teal, .green, .gray ], startPoint: .top, endPoint: .bottom)
-            .ignoresSafeArea())
+        
+        
     }
 }
 

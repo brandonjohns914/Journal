@@ -10,13 +10,12 @@ import SwiftUI
 struct MainViewToolbar: View {
     @EnvironmentObject var dataController: DataController
     @State private  var showingAwards = false
-    @State private var showingStore = false
+    
     
     var body: some View {
-        Button(action: tryNewTopic) {
-            Label("Add Topic", systemImage: "plus")
-        }
-        .sheet(isPresented: $showingStore, content: StoreView.init)
+        
+        AddingNewTopic()
+
         
         Button {
             showingAwards.toggle()
@@ -26,21 +25,17 @@ struct MainViewToolbar: View {
         .sheet(isPresented: $showingAwards, content: AwardsView.init)
         
         
-//        #if DEBUG
-//        Button {
-//            dataController.deleteAll()
-//            dataController.createSampleData()
-//        } label: {
-//            Label("ADD SAMPLES", systemImage: "flame")
-//        }
-//        
-//        #endif
+        #if DEBUG
+        Button {
+            dataController.deleteAll()
+            dataController.createSampleData()
+        } label: {
+            Label("ADD SAMPLES", systemImage: "flame")
+        }
+        
+        #endif
     }
     
-    func tryNewTopic() {
-        if dataController.newTopic() == false {
-            showingStore = true
-        }
-    }
+    
 }
 

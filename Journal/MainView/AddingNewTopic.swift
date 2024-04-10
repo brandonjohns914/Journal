@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct AddingNewTopic: View {
+    @EnvironmentObject var dataController: DataController
+    @State private var showingStore = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      
+
+        Button(action: tryNewTopic) {
+            Label("Add Topic", systemImage: "plus")
+        }
+        .sheet(isPresented: $showingStore, content: StoreView.init)
+    }
+    
+    func tryNewTopic() {
+        if dataController.newTopic() == false {
+            showingStore = true
+        }
     }
 }
 

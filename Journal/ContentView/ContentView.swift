@@ -39,6 +39,8 @@ struct ContentView: View {
             activity.title = "New Entry"
         }
         .onContinueUserActivity(newEntryActivity, perform: resumeActivity)
+        .background(LinearGradient(colors: [.blue, .teal, .green, .gray ], startPoint: .top, endPoint: .bottom)
+            .ignoresSafeArea())
     }
     
     init(dataController: DataController) {

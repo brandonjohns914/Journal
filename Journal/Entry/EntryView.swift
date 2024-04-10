@@ -37,8 +37,10 @@ struct EntryView: View {
                     }
                     
                     Section("Topic") {
+                        
                         TopicsMenuView(entry: entry)
                     }
+                    
                     
                 }
                 
