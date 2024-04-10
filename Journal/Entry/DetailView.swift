@@ -10,15 +10,19 @@ import SwiftUI
 struct DetailView: View {
     @EnvironmentObject var dataController: DataController
     var body: some View {
-        VStack {
-            if let entry = dataController.selectedEntry {
-                EntryView(entry: entry)
-            } else {
-                NoEntryView()
+        Group {
+            VStack {
+                if let entry = dataController.selectedEntry {
+                    EntryView(entry: entry)
+                } else {
+                    NoEntryView()
+                }
             }
+            .navigationTitle("Details")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle("Details")
-        .navigationBarTitleDisplayMode(.inline)
+        .background(LinearGradient(colors: [.blue, .teal, .green, .gray ], startPoint: .top, endPoint: .bottom)
+            .ignoresSafeArea())
     }
 }
 

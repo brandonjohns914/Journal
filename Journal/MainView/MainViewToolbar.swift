@@ -26,15 +26,15 @@ struct MainViewToolbar: View {
         .sheet(isPresented: $showingAwards, content: AwardsView.init)
         
         
-        #if DEBUG
-        Button {
-            dataController.deleteAll()
-            dataController.createSampleData()
-        } label: {
-            Label("ADD SAMPLES", systemImage: "flame")
-        }
-        
-        #endif
+//        #if DEBUG
+//        Button {
+//            dataController.deleteAll()
+//            dataController.createSampleData()
+//        } label: {
+//            Label("ADD SAMPLES", systemImage: "flame")
+//        }
+//        
+//        #endif
     }
     
     func tryNewTopic() {

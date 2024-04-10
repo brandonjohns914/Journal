@@ -16,26 +16,49 @@ struct FaceIDAuthentication: View {
     }
     
     var body: some View {
-        if viewModel.isUnlocked {
-            NavigationSplitView {
-                MainView(dataController: viewModel.dataController)
-            } content: {
-                ContentView(dataController: viewModel.dataController)
-            } detail: {
-                DetailView()
-            }
-        } else  {
-            Button("Unlock Journal", action: viewModel.authenticate)
-                .padding()
-                .background(.blue)
-                .foregroundStyle(.white)
-                .clipShape(.capsule)
+        Group {
+            if viewModel.isUnlocked {
+                NavigationSplitView {
+                    MainView(dataController: viewModel.dataController)
+                } content: {
+                    ContentView(dataController: viewModel.dataController)
+                } detail: {
+                    DetailView()
+                }
+            } else  {
+                Group {
+                    VStack {
+                        Text("Tap To Unlock")
+                            .font(.custom("San Francisco", size: 40))
+                        
+                            .foregroundStyle(.red)
+                            .font(.title)
+                            .fontWeight(.heavy)
+                        
+                            .padding()
+                        
+                        Image(systemName: "lock.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundStyle(AngularGradient(colors: [.gray, .black, .gray, .black, .gray], center: .center))
+                            .padding()
+                        
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(LinearGradient(colors: [.blue, .teal, .green, .gray ], startPoint: .top, endPoint: .bottom)
+                        .ignoresSafeArea())
+                    
+                }
+                
+                .onTapGesture(perform: viewModel.authenticate)
                 .alert("Authentication error", isPresented: $viewModel.isShowingAuthenticationError) {
                     Button("OK") { }
                 } message: {
                     Text(viewModel.authenticationError)
                 }
+            }
         }
+        //.background(Gradient(colors: [])
     }
 }
 

@@ -28,7 +28,9 @@ struct JournalApp: App {
                 }
             }
             .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
+            
         }
+        
     }
     
     func loadSpotlightItem(_ userActivity: NSUserActivity) {

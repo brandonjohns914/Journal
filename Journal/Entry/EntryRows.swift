@@ -15,6 +15,7 @@ struct EntryRows: View {
             HStack {
                 Image(systemName: "exclamationmark.circle")
                     .imageScale(.large)
+                    .foregroundStyle(.red)
                     .opacity(viewModel.iconOpactiy)
                     .accessibilityIdentifier(viewModel.iconIdentifier)
                 
@@ -33,10 +34,12 @@ struct EntryRows: View {
                     Text(viewModel.creationDate)
                         .accessibilityLabel(viewModel.accessibilityCreationDate)
                         .font(.subheadline)
+                        .foregroundStyle(.gray)
                     
                     if viewModel.completed {
                         Text("Closed")
                             .font(.body.smallCaps())
+                            .foregroundStyle(.red)
                     }
                 }
                 .foregroundStyle(.secondary)

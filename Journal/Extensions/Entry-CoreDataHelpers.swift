@@ -56,6 +56,8 @@ extension EntryJournal {
         set { reminderTime = newValue }
     }
     
+ 
+    
     static var example: EntryJournal {
         let controller = DataController(inMemory: true)
         

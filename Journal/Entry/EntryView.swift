@@ -42,6 +42,9 @@ struct EntryView: View {
                     
                 }
                 
+                
+                // Section { PhotoPickerView(entry: entry) }
+                
                 Section {
                     VStack(alignment: .leading) {
                         Text("Description of the entry")
@@ -57,9 +60,9 @@ struct EntryView: View {
                     
                     if entry.reminderEnabled {
                         DatePicker(
-                        "Reminder time",
-                        selection: $entry.entryReminderTime,
-                        displayedComponents: .hourAndMinute
+                            "Reminder time",
+                            selection: $entry.entryReminderTime,
+                            displayedComponents: .hourAndMinute
                         )
                     }
                 }
@@ -84,7 +87,8 @@ struct EntryView: View {
             .onChange(of: entry.reminderTime) { _,_  in
                 updateReminder()
             }
-
+        
+    
         }
         
     func showAppSettings() {

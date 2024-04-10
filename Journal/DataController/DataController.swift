@@ -322,11 +322,12 @@ class DataController: ObservableObject {
         entry.creationDate = .now
         entry.priority = 1
         
+        
         if let topic = selectedFilter?.topic {
             entry.addToTopics(topic)
         }
         
-        
+                
         
         selectedEntry = entry
         
@@ -388,6 +389,8 @@ class DataController: ObservableObject {
     func results<T: NSManagedObject>(for fetchRequest: NSFetchRequest<T>) -> [T] {
         return (try? container.viewContext.fetch(fetchRequest)) ?? []
     }
+    
+    
     
 }
 
