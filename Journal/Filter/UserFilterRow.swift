@@ -14,6 +14,7 @@ struct UserFilterRow: View {
     var body: some View {
         NavigationLink(value: filter) {
             Label(filter.name, systemImage: filter.icon)
+                .foregroundStyle(.green)
                 .badge(filter.activeEntriesCount)
                 .contextMenu{
                     Button {
@@ -27,10 +28,12 @@ struct UserFilterRow: View {
                     } label: {
                         Label("Delete", systemImage: "trash")
                     }
+                    
                 }
                 .accessibilityElement()
                 .accessibilityLabel(filter.name)
                 .accessibilityHint("\(filter.activeEntriesCount) entries")
+                
             
         }
     }

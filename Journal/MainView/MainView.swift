@@ -22,6 +22,7 @@ struct MainView: View {
             Section("Smart Filters") {
                 ForEach(smartFilters, content: SmartFilterRow.init)
             }
+            .foregroundStyle(.blue)
             
             Section("Topics") {
                 ForEach(viewModel.topicFilters) { filter in
@@ -29,6 +30,7 @@ struct MainView: View {
                     
                 }
                 .onDelete(perform: viewModel.delete)
+                .foregroundStyle(.green)
                 
             }
         }
@@ -39,6 +41,7 @@ struct MainView: View {
         }
         .toolbar(content: MainViewToolbar.init)
         .navigationTitle("Filters")
+        
     }
     
    

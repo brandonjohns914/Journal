@@ -23,10 +23,12 @@ struct EntryRows: View {
                     Text(viewModel.entryName)
                         .font(.headline)
                         .lineLimit(1)
+                        .foregroundStyle(.blue)
                     
                     Text(viewModel.entryTopicsList)
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
+                        .foregroundStyle(.lightBlue)
                 }
                 Spacer()
                 
@@ -39,11 +41,16 @@ struct EntryRows: View {
                     if viewModel.completed {
                         Text("Closed")
                             .font(.body.smallCaps())
-                            .foregroundStyle(.red)
+                            .foregroundStyle(.gold)
+                    } else {
+                        Text("Open")
+                            .font(.body.smallCaps())
+                            .foregroundStyle(.green)
                     }
                 }
                 .foregroundStyle(.secondary)
             }
+            
         }
         .accessibilityHint(viewModel.accessibilityHint)
         .accessibilityIdentifier(viewModel.entry.entryName)

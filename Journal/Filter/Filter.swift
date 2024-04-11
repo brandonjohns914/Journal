@@ -13,13 +13,14 @@ struct Filter: Identifiable, Hashable {
     var icon: String
     var minModificationDate = Date.distantPast
     
+    
     var topic: Topic?
     
     var activeEntriesCount: Int {
         topic?.topicActiveEntries.count ?? 0
     }
     
-    static var all = Filter(id: UUID(), name: "All Entries", icon: "tray")
+    static var all = Filter(id: UUID(), name: "All Entries", icon: "pencil.and.scribble")
     // all entries in the last 10 days
     static var recent = Filter(id: UUID(), name: "Recent Entries", icon: "clock", minModificationDate: .now.addingTimeInterval(86400 * -10))
     
