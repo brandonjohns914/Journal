@@ -339,9 +339,7 @@ class DataController: ObservableObject {
             entry.addToTopics(topic)
         }
         
-        if let location = selectedFilter?.location {
-            entry.addToLocations(location)
-        }
+       
         
         selectedEntry = entry
         
@@ -406,22 +404,10 @@ class DataController: ObservableObject {
     func results<T: NSManagedObject>(for fetchRequest: NSFetchRequest<T>) -> [T] {
         return (try? container.viewContext.fetch(fetchRequest)) ?? []
     }
+  
+        
+
     
-    func newLocation() {
-        let location = LocationCoreData(context: container.viewContext)
-        location.idLocationCoreData = UUID()
-        location.nameLocationCoreData = "New Location"
-        location.descriptionLocactionCoreData = "Location Description"
-        location.latitudeLocationCoreData = 0.0
-        location.longitudeLocationCoreData = 0.0
-
-        
-        selectedLocation = location
-            
-        save()
-        
-
-    }
     
     
   
@@ -436,4 +422,26 @@ class DataController: ObservableObject {
          topic.name = "New Topic"
          save()
      }
+     
+     
+     func newLocation() {
+         let location = LocationCoreData(context: container.viewContext)
+         location.idLocationCoreData = UUID()
+         location.nameLocationCoreData = "New Location"
+         location.descriptionLocactionCoreData = "Location Description"
+         location.latitudeLocationCoreData = 0.0
+         location.longitudeLocationCoreData = 0.0
+
+         
+         selectedLocation = location
+             
+         save()
+     
+     
+     
+     
+     
+     
+     
+     
      */

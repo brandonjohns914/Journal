@@ -34,7 +34,9 @@ struct MainView: View {
        
             }
             Section("Travel") {
-               Text("TEST")
+                NavigationLink("MAP") {
+                    LocationView()
+                }
             }
         }
         .alert("Rename Topic", isPresented: $viewModel.renamingTopic) {

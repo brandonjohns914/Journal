@@ -43,7 +43,6 @@ struct EntryView: View {
                 }
                 
                 
-               
                 
                 Section {
                     VStack(alignment: .leading) {
@@ -55,13 +54,7 @@ struct EntryView: View {
                     }
                 }
                 
-                Section("Map") {
-                    //NavigationLink("Map", destination: LocationView(entry: entry))
-                }
                 
-                Section("Pictures") {
-                    //PhotoPickerView(entry: entry)
-                }
                 
                 Section("Reminders") {
                     EntryViewReminders(entry: entry)
