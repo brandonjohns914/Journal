@@ -30,10 +30,10 @@ final class AwardsTest: BaseTestCase {
         let values = [1, 10, 20, 50, 100, 250, 500, 1000]
 
         for (count, value) in values.enumerated() {
-            var entries = [Entry]()
+            var entries = [EntryJournal]()
 
             for _ in 0..<value {
-                let entry = Entry(context: managedObjectContext)
+                let entry = EntryJournal(context: managedObjectContext)
                     entries.append(entry)
             }
 

@@ -31,7 +31,10 @@ struct MainView: View {
                 }
                 .onDelete(perform: viewModel.delete)
                 .foregroundStyle(.green)
-                
+       
+            }
+            Section("Travel") {
+               Text("TEST")
             }
         }
         .alert("Rename Topic", isPresented: $viewModel.renamingTopic) {

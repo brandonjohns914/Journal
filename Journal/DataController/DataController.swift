@@ -11,7 +11,7 @@ import PhotosUI
 import SwiftUI
 import StoreKit
 import WidgetKit
-
+import MapKit
 
 enum SortType: String {
     case dateCreated = "creationDate"
@@ -42,6 +42,11 @@ class DataController: ObservableObject {
     
     /// The selected Entry in the view the user is looking at.
     @Published var selectedEntry: EntryJournal?
+    
+    @Published var selectedLocation: LocationCoreData?
+    
+   
+    
     
     @Published var filterText = ""
     @Published var filterTokens = [Topic]()
@@ -81,6 +86,8 @@ class DataController: ObservableObject {
     }()
     
     
+  
+
     
     /// Initializer to load Main (data model) for previewing
     /// - Parameter inMemory: when true memory is created and when false memory is created on disk
@@ -179,6 +186,7 @@ class DataController: ObservableObject {
                 entry.creationDate = .now
                 entry.completed = Bool.random()
                 entry.priority = Int16.random(in: 0...2)
+                
                 topic.addToEntries(entry)
             }
         }
@@ -316,6 +324,9 @@ class DataController: ObservableObject {
         
     }
     
+
+
+    
     func newEntry() {
         let entry = EntryJournal(context: container.viewContext)
         entry.entryName = "New Entry"
@@ -323,18 +334,24 @@ class DataController: ObservableObject {
         entry.priority = 1
         
         
+                
         if let topic = selectedFilter?.topic {
             entry.addToTopics(topic)
         }
         
-                
+        if let location = selectedFilter?.location {
+            entry.addToLocations(location)
+        }
         
         selectedEntry = entry
         
         save()
     }
     
+  
+
     
+    //func createNewLocation
     
     
     func newTopic() -> Bool {
@@ -390,7 +407,24 @@ class DataController: ObservableObject {
         return (try? container.viewContext.fetch(fetchRequest)) ?? []
     }
     
+    func newLocation() {
+        let location = LocationCoreData(context: container.viewContext)
+        location.idLocationCoreData = UUID()
+        location.nameLocationCoreData = "New Location"
+        location.descriptionLocactionCoreData = "Location Description"
+        location.latitudeLocationCoreData = 0.0
+        location.longitudeLocationCoreData = 0.0
+
+        
+        selectedLocation = location
+            
+        save()
+        
+
+    }
     
+    
+  
     
 }
 

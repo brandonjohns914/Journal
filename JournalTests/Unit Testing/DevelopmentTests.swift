@@ -16,7 +16,7 @@ final class DevelopmentTests: BaseTestCase {
         dataController.createSampleData()
         
         XCTAssertEqual(dataController.count(for: Topic.fetchRequest()), 5, "There should be 5 sample topics.")
-        XCTAssertEqual(dataController.count(for: Entry.fetchRequest()), 50, "There should be 50 sample entries.")
+        XCTAssertEqual(dataController.count(for: EntryJournal.fetchRequest()), 50, "There should be 50 sample entries.")
     }
     
     func testDeleteAllClearsEverything() {
@@ -24,7 +24,7 @@ final class DevelopmentTests: BaseTestCase {
         dataController.deleteAll()
 
         XCTAssertEqual(dataController.count(for: Topic.fetchRequest()), 0, "deleteAll() should leave 0 topics.")
-        XCTAssertEqual(dataController.count(for: Entry.fetchRequest()), 0, "deleteAll() should leave 0 entries.")
+        XCTAssertEqual(dataController.count(for: EntryJournal.fetchRequest()), 0, "deleteAll() should leave 0 entries.")
     }
     
     func testExampleTagHasNoIssues() {
@@ -33,7 +33,7 @@ final class DevelopmentTests: BaseTestCase {
     }
 
     func testExampleIssueIsHighPriority() {
-        let entry = Entry.example
+        let entry = EntryJournal.example
         XCTAssertEqual(entry.priority, 2, "The example entry should be high priority.")
     }
 }

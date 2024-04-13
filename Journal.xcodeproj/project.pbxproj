@@ -32,7 +32,6 @@
 		415863882BC1F28B00741128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415863872BC1F28B00741128 /* AppDelegate.swift */; };
 		4158638A2BC1F29B00741128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415863892BC1F29B00741128 /* SceneDelegate.swift */; };
 		417074E12BC72260009C0BDF /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417074E02BC72260009C0BDF /* PhotoPickerView.swift */; };
-		417075002BC75482009C0BDF /* AddingNewTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417074FF2BC75482009C0BDF /* AddingNewTopic.swift */; };
 		417881062BBE13AF00BBACF7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881052BBE13AF00BBACF7 /* MainViewModel.swift */; };
 		4178810A2BBF31EF00BBACF7 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881092BBF31EF00BBACF7 /* ContentViewModel.swift */; };
 		417881112BBF4DA900BBACF7 /* EntryRowsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881102BBF4DA900BBACF7 /* EntryRowsViewModel.swift */; };
@@ -70,6 +69,13 @@
 		41B0FA822BC4886300263C8B /* DataController-Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA812BC4886200263C8B /* DataController-Awards.swift */; };
 		41B0FAAD2BC5DB4200263C8B /* FaceIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FAAC2BC5DB4200263C8B /* FaceIDAuthentication.swift */; };
 		41B0FAAF2BC5DB4E00263C8B /* FaceIDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FAAE2BC5DB4E00263C8B /* FaceIDViewModel.swift */; };
+		41C26D212BCA003100FA98E9 /* EntryViewNameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C26D202BCA003100FA98E9 /* EntryViewNameChange.swift */; };
+		41C26D232BCA013100FA98E9 /* EntryViewReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C26D222BCA013100FA98E9 /* EntryViewReminders.swift */; };
+		41E487582BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E487572BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift */; };
+		41E4877E2BC9F2B800EDD8E8 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E4877D2BC9F2B800EDD8E8 /* LocationView.swift */; };
+		41E487802BC9F2C000EDD8E8 /* EditLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E4877F2BC9F2C000EDD8E8 /* EditLocationView.swift */; };
+		41E487822BC9F30100EDD8E8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E487812BC9F30100EDD8E8 /* Location.swift */; };
+		41E487882BC9F4FB00EDD8E8 /* EditLocationView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E487872BC9F4FB00EDD8E8 /* EditLocationView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,7 +146,6 @@
 		415863872BC1F28B00741128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		415863892BC1F29B00741128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		417074E02BC72260009C0BDF /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
-		417074FF2BC75482009C0BDF /* AddingNewTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingNewTopic.swift; sourceTree = "<group>"; };
 		417881042BBE0F4600BBACF7 /* JournalUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = JournalUITests.xctestplan; sourceTree = "<group>"; };
 		417881052BBE13AF00BBACF7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		417881092BBF31EF00BBACF7 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
@@ -178,6 +183,13 @@
 		41B0FA832BC489A100263C8B /* JournalWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalWidgetExtension.entitlements; sourceTree = "<group>"; };
 		41B0FAAC2BC5DB4200263C8B /* FaceIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDAuthentication.swift; sourceTree = "<group>"; };
 		41B0FAAE2BC5DB4E00263C8B /* FaceIDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDViewModel.swift; sourceTree = "<group>"; };
+		41C26D202BCA003100FA98E9 /* EntryViewNameChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewNameChange.swift; sourceTree = "<group>"; };
+		41C26D222BCA013100FA98E9 /* EntryViewReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewReminders.swift; sourceTree = "<group>"; };
+		41E487572BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		41E4877D2BC9F2B800EDD8E8 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		41E4877F2BC9F2C000EDD8E8 /* EditLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocationView.swift; sourceTree = "<group>"; };
+		41E487812BC9F30100EDD8E8 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		41E487872BC9F4FB00EDD8E8 /* EditLocationView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditLocationView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				4127811B2B9A75E700EECEBA /* Entry-CoreDataHelpers.swift */,
+				41E487572BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift */,
 				4127811E2B9A7D7E00EECEBA /* Topic-CoreDataHelpers.swift */,
 				414F5E912BA0DA710098C784 /* Bundle-Decodable.swift */,
 			);
@@ -337,6 +350,7 @@
 		417074E22BC73AA2009C0BDF /* DoesntWorkYet */ = {
 			isa = PBXGroup;
 			children = (
+				41E487502BC9BE8600EDD8E8 /* Travel */,
 				417074E02BC72260009C0BDF /* PhotoPickerView.swift */,
 			);
 			path = DoesntWorkYet;
@@ -348,7 +362,6 @@
 				412781152B9A616C00EECEBA /* MainView.swift */,
 				417881052BBE13AF00BBACF7 /* MainViewModel.swift */,
 				41AC04062BA246E7001DAB12 /* MainViewToolbar.swift */,
-				417074FF2BC75482009C0BDF /* AddingNewTopic.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -380,6 +393,8 @@
 				412781202B9A869600EECEBA /* EntryRows.swift */,
 				417881102BBF4DA900BBACF7 /* EntryRowsViewModel.swift */,
 				412781242B9A8CBB00EECEBA /* EntryView.swift */,
+				41C26D222BCA013100FA98E9 /* EntryViewReminders.swift */,
+				41C26D202BCA003100FA98E9 /* EntryViewNameChange.swift */,
 				41AC04082BA2709E001DAB12 /* EntryViewToolbar.swift */,
 				412781222B9A8BCC00EECEBA /* NoEntryView.swift */,
 			);
@@ -469,6 +484,17 @@
 				41B0FAAE2BC5DB4E00263C8B /* FaceIDViewModel.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		41E487502BC9BE8600EDD8E8 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				41E4877D2BC9F2B800EDD8E8 /* LocationView.swift */,
+				41E487812BC9F30100EDD8E8 /* Location.swift */,
+				41E4877F2BC9F2C000EDD8E8 /* EditLocationView.swift */,
+				41E487872BC9F4FB00EDD8E8 /* EditLocationView-ViewModel.swift */,
+			);
+			path = Travel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -640,6 +666,7 @@
 				41AC040F2BA38CC5001DAB12 /* MissingTopicView.swift in Sources */,
 				4127811A2B9A61C400EECEBA /* Filter.swift in Sources */,
 				412780F52B992FA800EECEBA /* Main.xcdatamodeld in Sources */,
+				41C26D232BCA013100FA98E9 /* EntryViewReminders.swift in Sources */,
 				412781182B9A617E00EECEBA /* DetailView.swift in Sources */,
 				415863882BC1F28B00741128 /* AppDelegate.swift in Sources */,
 				4158638A2BC1F29B00741128 /* SceneDelegate.swift in Sources */,
@@ -651,23 +678,28 @@
 				4178810A2BBF31EF00BBACF7 /* ContentViewModel.swift in Sources */,
 				417881112BBF4DA900BBACF7 /* EntryRowsViewModel.swift in Sources */,
 				414F5E8E2BA0D0B50098C784 /* ContentViewToolbar.swift in Sources */,
+				41E487822BC9F30100EDD8E8 /* Location.swift in Sources */,
 				41AC04092BA2709E001DAB12 /* EntryViewToolbar.swift in Sources */,
 				417074E12BC72260009C0BDF /* PhotoPickerView.swift in Sources */,
 				417881152BC0AE8300BBACF7 /* DataController-Notifications.swift in Sources */,
 				412781232B9A8BCC00EECEBA /* NoEntryView.swift in Sources */,
 				41B0FAAD2BC5DB4200263C8B /* FaceIDAuthentication.swift in Sources */,
 				414F5E982BA0DCB10098C784 /* AwardsView.swift in Sources */,
+				41E487802BC9F2C000EDD8E8 /* EditLocationView.swift in Sources */,
 				412781212B9A869600EECEBA /* EntryRows.swift in Sources */,
 				412781142B9A52AB00EECEBA /* DataController.swift in Sources */,
 				412780DE2B992D3C00EECEBA /* ContentView.swift in Sources */,
 				41AC040B2BA27129001DAB12 /* TopicsMenuView.swift in Sources */,
 				412781162B9A616C00EECEBA /* MainView.swift in Sources */,
+				41E4877E2BC9F2B800EDD8E8 /* LocationView.swift in Sources */,
+				41E487882BC9F4FB00EDD8E8 /* EditLocationView-ViewModel.swift in Sources */,
 				41AD7C5F2BBCBDB100800C7D /* UserFilterRow.swift in Sources */,
 				41B0FAAF2BC5DB4E00263C8B /* FaceIDViewModel.swift in Sources */,
 				417881182BC0CED100BBACF7 /* DataController-StoreKit.swift in Sources */,
-				417075002BC75482009C0BDF /* AddingNewTopic.swift in Sources */,
 				412780DC2B992D3C00EECEBA /* JournalApp.swift in Sources */,
 				414F5E962BA0DAC60098C784 /* Award.swift in Sources */,
+				41E487582BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift in Sources */,
+				41C26D212BCA003100FA98E9 /* EntryViewNameChange.swift in Sources */,
 				412781252B9A8CBB00EECEBA /* EntryView.swift in Sources */,
 				417881062BBE13AF00BBACF7 /* MainViewModel.swift in Sources */,
 				4178811A2BC0D27E00BBACF7 /* StoreView.swift in Sources */,

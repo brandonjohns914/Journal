@@ -8,7 +8,7 @@
 import Foundation
 
 extension EntryJournal {
-    
+
     /// Creates an array of all the topics by their name
     var entryTopicsList: String {
         let noTopics = NSLocalizedString("No Topics", comment: "The user has not created any topics yet.")
@@ -56,6 +56,11 @@ extension EntryJournal {
         set { reminderTime = newValue }
     }
     
+    var saveLocations: URL {
+        get {mapLocation ?? URL.documentsDirectory.appending(path: "/dev/null")}
+        set { mapLocation = URL.documentsDirectory.appending(path: "SavedPlaces") }
+        
+    }
  
     
     static var example: EntryJournal {
@@ -68,6 +73,7 @@ extension EntryJournal {
         entry.entryDescription = "This is an example entry"
         entry.priority = 2
         entry.creationDate = .now
+        //entry.mapLocation =
         return entry
     }
 }

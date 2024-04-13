@@ -13,7 +13,7 @@ import XCTest
 final class ExtensionTests: BaseTestCase {
 
     func testEntryNameUnwrap() {
-        let entry = Entry(context: managedObjectContext)
+        let entry = EntryJournal(context: managedObjectContext)
 
         entry.entryNameCoreData = "Example entry"
         XCTAssertEqual(entry.entryName, "Example entry", "Changing entry should also change entryname.")
@@ -24,7 +24,7 @@ final class ExtensionTests: BaseTestCase {
     }
 
     func testEntryDescriptionUnwrap() {
-        let entry = Entry(context: managedObjectContext)
+        let entry = EntryJournal(context: managedObjectContext)
 
         entry.entryDescriptionCoreData = "Example entry"
         XCTAssertEqual(entry.entryDescription, "Example entry", "Changing description should also change entryDescription.")
@@ -34,7 +34,7 @@ final class ExtensionTests: BaseTestCase {
     }
 
     func testEntryCreationDateUnwrap() {
-        let entry = Entry(context: managedObjectContext)
+        let entry = EntryJournal(context: managedObjectContext)
         let testDate = Date.now
 
         entry.creationDate = testDate
@@ -43,7 +43,7 @@ final class ExtensionTests: BaseTestCase {
     
     func testEntryTopicsUnwrap() {
         let topic = Topic(context: managedObjectContext)
-        let entry = Entry(context: managedObjectContext)
+        let entry = EntryJournal(context: managedObjectContext)
 
         XCTAssertEqual(entry.entryTopics.count, 0, "A new entry should have no topics.")
         entry.addToTopics(topic)
@@ -53,7 +53,7 @@ final class ExtensionTests: BaseTestCase {
 
     func testEntryTopicsList() {
         let topic = Topic(context: managedObjectContext)
-        let entry = Entry(context: managedObjectContext)
+        let entry = EntryJournal(context: managedObjectContext)
 
         topic.name = "My Topic"
         entry.addToTopics(topic)
@@ -62,15 +62,15 @@ final class ExtensionTests: BaseTestCase {
     }
     
     func testEntrySortingIsStable() {
-        let entry1 = Entry(context: managedObjectContext)
+        let entry1 = EntryJournal(context: managedObjectContext)
         entry1.entryNameCoreData = "B Entry"
         entry1.creationDate = .now
 
-        let entry2 = Entry(context: managedObjectContext)
+        let entry2 = EntryJournal(context: managedObjectContext)
         entry2.entryNameCoreData = "B Entry"
         entry2.creationDate = .now.addingTimeInterval(1)
 
-        let entry3 = Entry(context: managedObjectContext)
+        let entry3 = EntryJournal(context: managedObjectContext)
         entry3.entryNameCoreData = "A Issue"
         entry3.creationDate = .now.addingTimeInterval(100)
 
@@ -97,7 +97,7 @@ final class ExtensionTests: BaseTestCase {
     
     func testTopicActiveIssues() {
         let topic = Topic(context: managedObjectContext)
-        let entry = Entry(context: managedObjectContext)
+        let entry = EntryJournal(context: managedObjectContext)
 
         XCTAssertEqual(topic.topicActiveEntries.count, 0, "A new topic should have 0 active entries.")
 

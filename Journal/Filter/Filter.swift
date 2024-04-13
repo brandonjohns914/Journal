@@ -16,6 +16,8 @@ struct Filter: Identifiable, Hashable {
     
     var topic: Topic?
     
+    var location: LocationCoreData? 
+    
     var activeEntriesCount: Int {
         topic?.topicActiveEntries.count ?? 0
     }

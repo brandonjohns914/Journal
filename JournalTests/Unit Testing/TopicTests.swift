@@ -20,14 +20,14 @@ final class TopicTests: BaseTestCase {
             let topic = Topic(context: managedObjectContext)
 
             for _ in 0..<count {
-                let entry = Entry(context: managedObjectContext)
+                let entry = EntryJournal(context: managedObjectContext)
                 topic.addToEntries(entry)
                 
             }
         }
 
         XCTAssertEqual(dataController.count(for: Topic.fetchRequest()), count, "Expected \(count) topics.")
-        XCTAssertEqual(dataController.count(for: Entry.fetchRequest()), entryCount, "Expected \(entryCount) entries.")
+        XCTAssertEqual(dataController.count(for: EntryJournal.fetchRequest()), entryCount, "Expected \(entryCount) entries.")
     }
 
     func testDeletingTopicDoesNotDeleteEntries() throws {
@@ -39,7 +39,7 @@ final class TopicTests: BaseTestCase {
         dataController.delete(topics[0])
         
         XCTAssertEqual(dataController.count(for: Topic.fetchRequest()), 4, "Expected 4 topicss after deleting 1.")
-        XCTAssertEqual(dataController.count(for: Entry.fetchRequest()), 50, "Expected 50 entries after deleting a topic.")
+        XCTAssertEqual(dataController.count(for: EntryJournal.fetchRequest()), 50, "Expected 50 entries after deleting a topic.")
     }
 
 }
