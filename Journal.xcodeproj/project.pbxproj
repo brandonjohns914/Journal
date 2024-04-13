@@ -235,7 +235,6 @@
 		412780CF2B992D3C00EECEBA = {
 			isa = PBXGroup;
 			children = (
-				413B91682BCB0CCF00884452 /* WikiEditLocationView.swift */,
 				412780DA2B992D3C00EECEBA /* Journal */,
 				41AD7C692BBCC3AB00800C7D /* JournalTests */,
 				412D82FA2BBDE90000EB1995 /* JournalUITests */,
@@ -349,9 +348,50 @@
 		413B91612BCB062F00884452 /* WikiResults */ = {
 			isa = PBXGroup;
 			children = (
+				413B91682BCB0CCF00884452 /* WikiEditLocationView.swift */,
 				413B915F2BCB05E800884452 /* ResultsWiki.swift */,
 			);
 			path = WikiResults;
+			sourceTree = "<group>";
+		};
+		41544ED22BCB1FE00086FED6 /* LocationView */ = {
+			isa = PBXGroup;
+			children = (
+				413B915B2BCB002700884452 /* LocationView.swift */,
+				413B91642BCB07E600884452 /* LocationView-ViewModel.swift */,
+			);
+			path = LocationView;
+			sourceTree = "<group>";
+		};
+		41544ED32BCB1FF20086FED6 /* EditLocationView */ = {
+			isa = PBXGroup;
+			children = (
+				413B91662BCB0B1E00884452 /* EditLocationView-ViewModel.swift */,
+				413B915D2BCB03B400884452 /* EditLocationView.swift */,
+				413B91612BCB062F00884452 /* WikiResults */,
+			);
+			path = EditLocationView;
+			sourceTree = "<group>";
+		};
+		41544ED42BCB200F0086FED6 /* EntryRows */ = {
+			isa = PBXGroup;
+			children = (
+				412781202B9A869600EECEBA /* EntryRows.swift */,
+				417881102BBF4DA900BBACF7 /* EntryRowsViewModel.swift */,
+			);
+			path = EntryRows;
+			sourceTree = "<group>";
+		};
+		41544ED52BCB20320086FED6 /* EntryView */ = {
+			isa = PBXGroup;
+			children = (
+				412781242B9A8CBB00EECEBA /* EntryView.swift */,
+				41C26D222BCA013100FA98E9 /* EntryViewReminders.swift */,
+				41C26D202BCA003100FA98E9 /* EntryViewNameChange.swift */,
+				41AC04082BA2709E001DAB12 /* EntryViewToolbar.swift */,
+				412781222B9A8BCC00EECEBA /* NoEntryView.swift */,
+			);
+			path = EntryView;
 			sourceTree = "<group>";
 		};
 		4158638B2BC1F2AE00741128 /* QuickAction */ = {
@@ -405,13 +445,8 @@
 			isa = PBXGroup;
 			children = (
 				412781172B9A617E00EECEBA /* DetailView.swift */,
-				412781202B9A869600EECEBA /* EntryRows.swift */,
-				417881102BBF4DA900BBACF7 /* EntryRowsViewModel.swift */,
-				412781242B9A8CBB00EECEBA /* EntryView.swift */,
-				41C26D222BCA013100FA98E9 /* EntryViewReminders.swift */,
-				41C26D202BCA003100FA98E9 /* EntryViewNameChange.swift */,
-				41AC04082BA2709E001DAB12 /* EntryViewToolbar.swift */,
-				412781222B9A8BCC00EECEBA /* NoEntryView.swift */,
+				41544ED42BCB200F0086FED6 /* EntryRows */,
+				41544ED52BCB20320086FED6 /* EntryView */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -505,11 +540,8 @@
 			isa = PBXGroup;
 			children = (
 				413B91592BCAFF8E00884452 /* Location.swift */,
-				413B915B2BCB002700884452 /* LocationView.swift */,
-				413B91642BCB07E600884452 /* LocationView-ViewModel.swift */,
-				413B915D2BCB03B400884452 /* EditLocationView.swift */,
-				413B91662BCB0B1E00884452 /* EditLocationView-ViewModel.swift */,
-				413B91612BCB062F00884452 /* WikiResults */,
+				41544ED22BCB1FE00086FED6 /* LocationView */,
+				41544ED32BCB1FF20086FED6 /* EditLocationView */,
 			);
 			path = Travel;
 			sourceTree = "<group>";

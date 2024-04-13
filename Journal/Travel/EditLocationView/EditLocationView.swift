@@ -24,10 +24,10 @@ struct EditLocationView: View {
                     
                     VStack {
                         Toggle("Show Near by Locations", isOn: $viewModel.showingWiki)
-                                            
-                                            if viewModel.showingWiki {
-                                                WikiEditLocationView(location: viewModel.location)
-                                            }
+                         
+                        if viewModel.showingWiki {
+                            WikiEditLocationView(location: viewModel.location)
+                        }
                         
                         
                     }

@@ -40,7 +40,6 @@ extension EditLocationView {
             }
         }
         init(location: Location) {
-          
             _viewModel = State(initialValue: ViewModel(location: location))
         }
         
