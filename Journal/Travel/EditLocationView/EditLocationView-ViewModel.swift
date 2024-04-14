@@ -8,6 +8,7 @@
 import Foundation
 
 extension EditLocationView {
+    @Observable
     class ViewModel {
         enum LoadingState {
             case loading, loaded, failed
