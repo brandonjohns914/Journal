@@ -8,7 +8,6 @@
 import Foundation
 
 extension EditLocationView {
-    @Observable
     class ViewModel {
         enum LoadingState {
             case loading, loaded, failed
@@ -16,7 +15,7 @@ extension EditLocationView {
         
         var location: Location
         
-        var showingWiki = true
+        var showingWiki = false
         
         var loadingState = LoadingState.loading
         var pages = [Page]()
@@ -39,6 +38,7 @@ extension EditLocationView {
             return newLocation
         }
         
+      
         
         
         func fetchNearbyPlaces() async {

@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import MapKit
+
 
 struct Filter: Identifiable, Hashable {
     var id: UUID
@@ -13,6 +15,7 @@ struct Filter: Identifiable, Hashable {
     var icon: String
     var minModificationDate = Date.distantPast
     
+    //var location: Location?
     
     var topic: Topic?
     

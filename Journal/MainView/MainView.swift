@@ -38,6 +38,7 @@ struct MainView: View {
                     LocationView()
                 }
             }
+            
         }
         .alert("Rename Topic", isPresented: $viewModel.renamingTopic) {
             Button("OK", action: viewModel.completeRename)
