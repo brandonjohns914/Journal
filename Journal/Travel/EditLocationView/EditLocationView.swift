@@ -44,6 +44,7 @@ struct EditLocationView: View {
                     dismiss()
                 }
                 
+                
             }
             .task {
                 await viewModel.fetchNearbyPlaces()

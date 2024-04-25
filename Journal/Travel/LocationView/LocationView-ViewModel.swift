@@ -15,9 +15,7 @@ extension LocationView {
          private(set) var locations: [Location]
         var selectedPlace: Location?
         
-        
         let savePath = URL.documentsDirectory.appending(path: "SavedPlaces")
-        
         
         init() {
             do {
@@ -62,11 +60,6 @@ extension LocationView {
             }
         }
     
-        
-       
-        
-     
-        
         func update(location: Location) {
             guard let selectedPlace else { return }
 
