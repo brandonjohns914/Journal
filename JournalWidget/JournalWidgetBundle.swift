@@ -11,6 +11,7 @@ import SwiftUI
 @main
 struct JournalWidgetBundle: WidgetBundle {
     var body: some Widget {
-        JournalWidget()
+        SimpleJournalWidget()
+        ComplexJournalWidget()
     }
 }

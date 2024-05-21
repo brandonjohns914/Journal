@@ -33,11 +33,11 @@ struct MainView: View {
                 .foregroundStyle(.green)
        
             }
-            Section("Travel") {
-                NavigationLink("MAP") {
-                    LocationView()
-                }
-            }
+//            Section("Travel") {
+//                NavigationLink("MAP") {
+//                    LocationView()
+//                }
+//            }
             
         }
         .alert("Rename Topic", isPresented: $viewModel.renamingTopic) {

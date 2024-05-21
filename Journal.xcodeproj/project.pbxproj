@@ -32,6 +32,8 @@
 		413B91652BCB07E600884452 /* LocationView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B91642BCB07E600884452 /* LocationView-ViewModel.swift */; };
 		413B91672BCB0B1E00884452 /* EditLocationView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B91662BCB0B1E00884452 /* EditLocationView-ViewModel.swift */; };
 		413B91692BCB0CCF00884452 /* WikiEditLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B91682BCB0CCF00884452 /* WikiEditLocationView.swift */; };
+		414D0B822BFD49D200E14B7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 412780EE2B992EE900EECEBA /* Localizable.strings */; };
+		414D0B842BFD4B3A00E14B7D /* ComplexJournalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */; };
 		414F5E8E2BA0D0B50098C784 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */; };
 		414F5E922BA0DA710098C784 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E912BA0DA710098C784 /* Bundle-Decodable.swift */; };
 		414F5E962BA0DAC60098C784 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E952BA0DAC60098C784 /* Award.swift */; };
@@ -66,7 +68,7 @@
 		41B0FA672BC4861B00263C8B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B0FA662BC4861B00263C8B /* WidgetKit.framework */; };
 		41B0FA692BC4861B00263C8B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B0FA682BC4861B00263C8B /* SwiftUI.framework */; };
 		41B0FA6C2BC4861B00263C8B /* JournalWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA6B2BC4861B00263C8B /* JournalWidgetBundle.swift */; };
-		41B0FA6E2BC4861B00263C8B /* JournalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA6D2BC4861B00263C8B /* JournalWidget.swift */; };
+		41B0FA6E2BC4861B00263C8B /* SimpleJournalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA6D2BC4861B00263C8B /* SimpleJournalWidget.swift */; };
 		41B0FA702BC4861D00263C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41B0FA6F2BC4861D00263C8B /* Assets.xcassets */; };
 		41B0FA742BC4861D00263C8B /* JournalWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 41B0FA642BC4861B00263C8B /* JournalWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		41B0FA792BC4873100263C8B /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 412780F32B992FA800EECEBA /* Main.xcdatamodeld */; };
@@ -151,6 +153,7 @@
 		413B91642BCB07E600884452 /* LocationView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationView-ViewModel.swift"; sourceTree = "<group>"; };
 		413B91662BCB0B1E00884452 /* EditLocationView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditLocationView-ViewModel.swift"; sourceTree = "<group>"; };
 		413B91682BCB0CCF00884452 /* WikiEditLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiEditLocationView.swift; sourceTree = "<group>"; };
+		414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexJournalWidget.swift; sourceTree = "<group>"; };
 		414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
 		414F5E912BA0DA710098C784 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		414F5E952BA0DAC60098C784 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
@@ -190,7 +193,7 @@
 		41B0FA662BC4861B00263C8B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		41B0FA682BC4861B00263C8B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		41B0FA6B2BC4861B00263C8B /* JournalWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalWidgetBundle.swift; sourceTree = "<group>"; };
-		41B0FA6D2BC4861B00263C8B /* JournalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalWidget.swift; sourceTree = "<group>"; };
+		41B0FA6D2BC4861B00263C8B /* SimpleJournalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleJournalWidget.swift; sourceTree = "<group>"; };
 		41B0FA6F2BC4861D00263C8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41B0FA712BC4861D00263C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41B0FA812BC4886200263C8B /* DataController-Awards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Awards.swift"; sourceTree = "<group>"; };
@@ -274,7 +277,6 @@
 				417881072BBF31CE00BBACF7 /* MainView */,
 				4178811C2BC0D2D800BBACF7 /* Store */,
 				4178810D2BBF32C800BBACF7 /* Topics */,
-				41E487502BC9BE8600EDD8E8 /* Travel */,
 				412780F22B992F6500EECEBA /* Localization */,
 				4127811D2B9A75EC00EECEBA /* Extensions */,
 				417074E22BC73AA2009C0BDF /* DoesntWorkYet */,
@@ -412,6 +414,7 @@
 		417074E22BC73AA2009C0BDF /* DoesntWorkYet */ = {
 			isa = PBXGroup;
 			children = (
+				41E487502BC9BE8600EDD8E8 /* Travel */,
 				417074E02BC72260009C0BDF /* PhotoPickerView.swift */,
 			);
 			path = DoesntWorkYet;
@@ -526,7 +529,8 @@
 			isa = PBXGroup;
 			children = (
 				41B0FA6B2BC4861B00263C8B /* JournalWidgetBundle.swift */,
-				41B0FA6D2BC4861B00263C8B /* JournalWidget.swift */,
+				41B0FA6D2BC4861B00263C8B /* SimpleJournalWidget.swift */,
+				414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */,
 				41B0FA6F2BC4861D00263C8B /* Assets.xcassets */,
 				41B0FA712BC4861D00263C8B /* Info.plist */,
 			);
@@ -635,7 +639,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					412780D72B992D3C00EECEBA = {
 						CreatedOnToolsVersion = 15.3;
@@ -708,6 +712,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41B0FA702BC4861D00263C8B /* Assets.xcassets in Resources */,
+				414D0B822BFD49D200E14B7D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,11 +800,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				41B0FA7D2BC487A800263C8B /* Filter.swift in Sources */,
+				414D0B842BFD4B3A00E14B7D /* ComplexJournalWidget.swift in Sources */,
 				41B0FA792BC4873100263C8B /* Main.xcdatamodeld in Sources */,
 				41B0FA7A2BC4874D00263C8B /* DataController.swift in Sources */,
 				41B0FA6C2BC4861B00263C8B /* JournalWidgetBundle.swift in Sources */,
 				41B0FA802BC487EF00263C8B /* DataController-StoreKit.swift in Sources */,
-				41B0FA6E2BC4861B00263C8B /* JournalWidget.swift in Sources */,
+				41B0FA6E2BC4861B00263C8B /* SimpleJournalWidget.swift in Sources */,
 				41B0FA7B2BC4875800263C8B /* Entry-CoreDataHelpers.swift in Sources */,
 				41B0FA7C2BC4875800263C8B /* Topic-CoreDataHelpers.swift in Sources */,
 			);
@@ -860,6 +866,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -921,6 +928,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -949,6 +957,7 @@
 				CODE_SIGN_ENTITLEMENTS = Journal/Configurations/Journal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Journal/Preview Content\"";
 				DEVELOPMENT_TEAM = CWCBRR328H;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -991,6 +1000,7 @@
 				CODE_SIGN_ENTITLEMENTS = Journal/Configurations/Journal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Journal/Preview Content\"";
 				DEVELOPMENT_TEAM = CWCBRR328H;
 				ENABLE_HARDENED_RUNTIME = YES;

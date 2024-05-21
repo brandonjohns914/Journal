@@ -1,6 +1,6 @@
 //
-//  JournalWidget.swift
-//  JournalWidget
+//  SimpleJournalWidget.swift
+//  SimpleJournalWidget
 //
 //  Created by Brandon Johns on 4/8/24.
 //
@@ -13,7 +13,7 @@ import SwiftUI
 // entry = entriesJournal because of wigets
 
 
-struct Provider: TimelineProvider {
+struct SimpleProvider: TimelineProvider {
     /// rough idea for users to know what the widget might look like
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date.now, entriesJournal: [.example])
@@ -42,8 +42,8 @@ struct SimpleEntry: TimelineEntry {
     let entriesJournal: [EntryJournal]
 }
 
-struct JournalWidgetEntryView : View {
-    var entry: Provider.Entry
+struct SimpleJournalWidgetEntryView : View {
+    var entry: SimpleProvider.Entry
 
     var body: some View {
         VStack {
@@ -60,27 +60,28 @@ struct JournalWidgetEntryView : View {
     }
 }
 
-struct JournalWidget: Widget {
-    let kind: String = "JournalWidget"
+struct SimpleJournalWidget: Widget {
+    let kind: String = "SimpleJournalWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: SimpleProvider()) { entry in
             if #available(iOS 17.0, *) {
-                JournalWidgetEntryView(entry: entry)
+                SimpleJournalWidgetEntryView(entry: entry)
                     .containerBackground(.fill.tertiary, for: .widget)
             } else {
-                JournalWidgetEntryView(entry: entry)
+                SimpleJournalWidgetEntryView(entry: entry)
                     .padding()
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Up next…")
+        .description("Your #1 top-priority entry.")
+        .supportedFamilies([.systemSmall])
     }
 }
 
 #Preview(as: .systemSmall) {
-    JournalWidget()
+    SimpleJournalWidget()
 } timeline: {
     SimpleEntry(date: .now, entriesJournal: [.example])
     SimpleEntry(date: .now, entriesJournal: [.example])
