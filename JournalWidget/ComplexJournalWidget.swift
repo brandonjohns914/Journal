@@ -43,14 +43,41 @@ struct ComplexEntry: TimelineEntry {
 }
 
 struct ComplexJournalWidgetEntryView : View {
+    @Environment(\.widgetFamily) var widgetFamily
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
     var entry: ComplexProvider.Entry
+    
+    var journalEntries: ArraySlice<EntryJournal> {
+        let entryJournalCount: Int
+        
+        switch widgetFamily {
+        case .systemSmall:
+            entryJournalCount = 1
+        case .systemLarge, .systemExtraLarge:
+            if dynamicTypeSize < .xxLarge {
+                entryJournalCount = 6
+            } else {
+                entryJournalCount =  5
+            }
+        default:
+            if dynamicTypeSize < .xLarge {
+                entryJournalCount = 3
+            } else {
+                entryJournalCount = 2
+            }
+        }
+        
+        return entry.entriesJournal.prefix(entryJournalCount)
+        
+    }
 
     var body: some View {
         VStack(spacing: 10) {
-            ForEach(entry.entriesJournal) { entryJournal in
+            ForEach(journalEntries) { entryJournal in
                 VStack(alignment: .leading) {
                     Text(entryJournal.entryName)
                         .font(.headline)
+                        .layoutPriority(1)
                     
                     if entryJournal.entryTopics.isEmpty == false {
                         Text(entryJournal.entryTopicsList)
