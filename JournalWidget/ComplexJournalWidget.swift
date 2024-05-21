@@ -74,17 +74,19 @@ struct ComplexJournalWidgetEntryView : View {
     var body: some View {
         VStack(spacing: 10) {
             ForEach(journalEntries) { entryJournal in
-                VStack(alignment: .leading) {
-                    Text(entryJournal.entryName)
-                        .font(.headline)
-                        .layoutPriority(1)
-                    
-                    if entryJournal.entryTopics.isEmpty == false {
-                        Text(entryJournal.entryTopicsList)
-                            .foregroundStyle(.secondary)
+                Link(destination: entryJournal.objectID.uriRepresentation()) {
+                    VStack(alignment: .leading) {
+                        Text(entryJournal.entryName)
+                            .font(.headline)
+                            .layoutPriority(1)
+                        
+                        if entryJournal.entryTopics.isEmpty == false {
+                            Text(entryJournal.entryTopicsList)
+                                .foregroundStyle(.secondary)
+                        }
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
     }

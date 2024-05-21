@@ -42,6 +42,15 @@ extension ContentView {
             }
         }
         
-        
+        func openURL(_ url: URL) {
+            if url.absoluteString.contains("newEntry") {
+                dataController.newEntry()
+            } else  if let entry = dataController.entry(with: url.absoluteString) {
+              dataController.selectedEntry = entry
+                dataController.selectedFilter = .all
+            }
+        }
     }
+    
+    
 }

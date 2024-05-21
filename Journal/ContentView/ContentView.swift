@@ -33,7 +33,7 @@ struct ContentView: View {
         }
         .navigationTitle("Entries")
         .onAppear(perform: askForReview)
-        .onOpenURL(perform: openURL)
+        .onOpenURL(perform: viewModel.openURL)
         .userActivity(newEntryActivity) { activity in
             activity.isEligibleForPrediction = true
             activity.title = "New Entry"
@@ -51,12 +51,6 @@ struct ContentView: View {
     func askForReview() {
         if viewModel.shouldRequestReview {
             requestReview()
-        }
-    }
-    
-    func openURL(_ url: URL) {
-        if url.absoluteString.contains("newEntry") {
-            viewModel.dataController.newEntry()
         }
     }
     
