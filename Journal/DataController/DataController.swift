@@ -160,12 +160,15 @@ class DataController: ObservableObject {
                 }
             }
 
-//            #if DEBUG
-//            if CommandLine.arguments.contains("enable-testing") {
-//                self?.deleteAll()
-//                UIView.setAnimationsEnabled(false)
-//            }
-//            #endif
+            #if DEBUG
+            if CommandLine.arguments.contains("enable-testing") {
+          
+                self?.deleteAll()
+                #if os(iOS)
+                UIView.setAnimationsEnabled(false)
+                #endif 
+            }
+            #endif
         }
     }
     /// Creates sample data that can be used for testing purposes

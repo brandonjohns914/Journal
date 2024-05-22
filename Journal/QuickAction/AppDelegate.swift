@@ -8,9 +8,8 @@
 import Foundation
 import SwiftUI
 
+#if os(iOS)
 class AppDelegate: NSObject, UIApplicationDelegate {
-    
-    
     func application(
         _ application: UIApplication,
         configurationForConnecting connectingSceneSession: UISceneSession,
@@ -22,3 +21,4 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
 }
+#endif

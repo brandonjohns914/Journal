@@ -20,11 +20,7 @@ struct EntryViewToolbar: View {
     
     var body: some View {
         Menu {
-            Button {
-                UIPasteboard.general.string = entry.entryName
-            } label: {
-                Label("Copy Entry Name", systemImage: "doc.on.doc")
-            }
+            Button("Copy Entry Name", systemImage: "doc.on.doc", action: copyToClipboard)
             
             Button(action: toggleCompleted) {
                 Label(openCloseButtonText, systemImage: "bubble.left.and.exclamationmark.bubble.right")
@@ -82,6 +78,15 @@ struct EntryViewToolbar: View {
                 // playing haptics didn't work, but that's okay
             }
         }
+    }
+    
+    func copyToClipboard() {
+        #if os(iOS)
+        UIPasteboard.general.string = entry.entryName
+        #else
+        NSPasteboard.general.prepareForNewContents()
+        NSPasteboard.general.setString(entry.entryName, forType: .string)
+        #endif
     }
 }
 

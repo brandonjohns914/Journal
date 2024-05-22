@@ -26,7 +26,13 @@ struct EntryViewReminders: View {
             }
         }
         .alert("Oops!", isPresented: $showingNotificationsError) {
+            #if os(macOS)
+            SettingsLink {
+                Text("Check Settings")
+            }
+            #else
             Button("Check Settings", action: showAppSettings)
+            #endif
             Button("Cancel", role: .cancel) { }
         } message: {
             Text("There was a problem setting your notification. Please check you have notifications enabled.")
@@ -39,13 +45,15 @@ struct EntryViewReminders: View {
         }
     }
     
+    #if os(iOS)
     func showAppSettings() {
         guard let settingsURL = URL(string: UIApplication.openNotificationSettingsURLString) else {
             return
         }
-
+      
         openURL(settingsURL)
     }
+    #endif
     
     func updateReminder() {
         dataController.removeReminders(for: entry)
