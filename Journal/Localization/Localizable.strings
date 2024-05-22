@@ -102,8 +102,9 @@
 
 /* AWARDS VIEW */
 "Awards" = "Awards";
-
-
+"Close" = "Close";
+"Locked" = "Locked";
+"Unlocked: %@" = "Unlocked: %@";
 
 /* DATA */
 "New Topic" = "New Topic";

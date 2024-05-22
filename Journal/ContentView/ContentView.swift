@@ -20,6 +20,7 @@ struct ContentView: View {
             }
             .onDelete(perform: viewModel.delete)
         }
+        .macFrame(minWidth: 220)
         .searchable(
             text: $viewModel.filterText,
             tokens: $viewModel.filterTokens,

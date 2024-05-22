@@ -19,6 +19,7 @@ struct EntryView: View {
                     VStack(alignment: .leading) {
                         TextField("Entry", text: $entry.entryName, prompt: Text("Enter the entry name here"))
                             .font(.title)
+                            .labelsHidden()
                         
                         Text("**Modified:**  \(entry.entryModifcationDate.formatted(date: .long, time: .shortened))")
                             .foregroundStyle(.secondary)
@@ -38,28 +39,21 @@ struct EntryView: View {
                         
                         TopicsMenuView(entry: entry)
                     }
-                    
-                    
                 }
-                
-                
-                
-                Section {
+  
+                Section("Basic Infomation") {
                     VStack(alignment: .leading) {
-                        Text("Description of the entry")
-                            .font(.title2)
-                            .foregroundStyle(.secondary)
+                      
                         
                         TextField("Description", text: $entry.entryDescription, prompt: Text("Enter the entry"))
+                            .labelsHidden()
                     }
                 }
-                
-                
-                
                 Section("Reminders") {
                     EntryViewReminders(entry: entry)
                 }
             }
+            .formStyle(.grouped)
             .disabled(entry.isDeleted)
             .onReceive(entry.objectWillChange) { _ in
                 dataController.queueSave()

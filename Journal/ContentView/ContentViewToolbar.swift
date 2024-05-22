@@ -23,6 +23,8 @@ struct ContentViewToolbar: View {
                     Text("Date Modified").tag(SortType.dateModified)
                     Text("Name").tag(SortType.name)
                 }
+                .pickerStyle(.inline)
+                .labelsHidden()
                 
                 Divider()
                 
@@ -31,6 +33,8 @@ struct ContentViewToolbar: View {
                     Text("Oldest to Newest").tag(false)
                     Text("Name").tag(true)
                 }
+                .pickerStyle(.inline)
+                .labelsHidden()
             }
             
             Picker("Status", selection: $dataController.filterStatus) {
@@ -51,10 +55,12 @@ struct ContentViewToolbar: View {
             Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
                 .symbolVariant(dataController.filterEnabled ? .fill : .none)
         }
+        .help("Filter")
         
         Button(action: dataController.newEntry) {
             Label("New Entry", systemImage: "square.and.pencil")
         }
+        .help("New Entry")
     }
 }
 

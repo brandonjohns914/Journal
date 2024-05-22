@@ -18,7 +18,7 @@ struct MainViewToolbar: View {
             Label("Add Topic", systemImage: "plus")
         }
         .sheet(isPresented: $showingStore, content: StoreView.init)
-
+        .help("Add Topic")
         
         Button {
             showingAwards.toggle()
@@ -26,6 +26,7 @@ struct MainViewToolbar: View {
             Label("Show Awards",systemImage: "rosette")
         }
         .sheet(isPresented: $showingAwards, content: AwardsView.init)
+        .help("Show Awards")
         
         
         #if DEBUG

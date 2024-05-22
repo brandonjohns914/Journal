@@ -45,6 +45,7 @@ struct MainView: View {
             Button("Cancel", role: .cancel) {}
             TextField("New Name", text: $viewModel.topicName)
         }
+        .macFrame(minWidth: 220)
         .toolbar(content: MainViewToolbar.init)
         .navigationTitle("Filters")
         
