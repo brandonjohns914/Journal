@@ -33,6 +33,19 @@
 		413B91672BCB0B1E00884452 /* EditLocationView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B91662BCB0B1E00884452 /* EditLocationView-ViewModel.swift */; };
 		413B91692BCB0CCF00884452 /* WikiEditLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B91682BCB0CCF00884452 /* WikiEditLocationView.swift */; };
 		4148B0432BFE9CAF00453452 /* InlineNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0422BFE9CAF00453452 /* InlineNavigationBar.swift */; };
+		4148B0492BFEA18500453452 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B0FA662BC4861B00263C8B /* WidgetKit.framework */; };
+		4148B04A2BFEA18500453452 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B0FA682BC4861B00263C8B /* SwiftUI.framework */; };
+		4148B0512BFEA18700453452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4148B0502BFEA18700453452 /* Assets.xcassets */; };
+		4148B0562BFEA18700453452 /* JournalWidgetMacExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4148B0482BFEA18500453452 /* JournalWidgetMacExtension.appex */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4148B05A2BFEA25600453452 /* SimpleJournalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA6D2BC4861B00263C8B /* SimpleJournalWidget.swift */; };
+		4148B05B2BFEA25600453452 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781192B9A61C400EECEBA /* Filter.swift */; };
+		4148B05C2BFEA25600453452 /* Entry-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127811B2B9A75E700EECEBA /* Entry-CoreDataHelpers.swift */; };
+		4148B05D2BFEA25600453452 /* JournalWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA6B2BC4861B00263C8B /* JournalWidgetBundle.swift */; };
+		4148B05E2BFEA25600453452 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881172BC0CED100BBACF7 /* DataController-StoreKit.swift */; };
+		4148B05F2BFEA25600453452 /* Topic-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127811E2B9A7D7E00EECEBA /* Topic-CoreDataHelpers.swift */; };
+		4148B0602BFEA25600453452 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781132B9A52AB00EECEBA /* DataController.swift */; };
+		4148B0612BFEA25600453452 /* ComplexJournalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */; };
+		4148B0622BFEA25F00453452 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 412780F32B992FA800EECEBA /* Main.xcdatamodeld */; };
 		414D0B822BFD49D200E14B7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 412780EE2B992EE900EECEBA /* Localizable.strings */; };
 		414D0B842BFD4B3A00E14B7D /* ComplexJournalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */; };
 		414F5E8E2BA0D0B50098C784 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */; };
@@ -70,7 +83,7 @@
 		41B0FA6C2BC4861B00263C8B /* JournalWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA6B2BC4861B00263C8B /* JournalWidgetBundle.swift */; };
 		41B0FA6E2BC4861B00263C8B /* SimpleJournalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA6D2BC4861B00263C8B /* SimpleJournalWidget.swift */; };
 		41B0FA702BC4861D00263C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41B0FA6F2BC4861D00263C8B /* Assets.xcassets */; };
-		41B0FA742BC4861D00263C8B /* JournalWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 41B0FA642BC4861B00263C8B /* JournalWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		41B0FA742BC4861D00263C8B /* JournalWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 41B0FA642BC4861B00263C8B /* JournalWidgetExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		41B0FA792BC4873100263C8B /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 412780F32B992FA800EECEBA /* Main.xcdatamodeld */; };
 		41B0FA7A2BC4874D00263C8B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781132B9A52AB00EECEBA /* DataController.swift */; };
 		41B0FA7B2BC4875800263C8B /* Entry-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127811B2B9A75E700EECEBA /* Entry-CoreDataHelpers.swift */; };
@@ -92,6 +105,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 412780D72B992D3C00EECEBA;
 			remoteInfo = Journal;
+		};
+		4148B0542BFEA18700453452 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 412780D02B992D3C00EECEBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4148B0472BFEA18500453452;
+			remoteInfo = JournalWidgetMacExtension;
 		};
 		41AD7C6C2BBCC3AB00800C7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -116,6 +136,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				4148B0562BFEA18700453452 /* JournalWidgetMacExtension.appex in Embed Foundation Extensions */,
 				41B0FA742BC4861D00263C8B /* JournalWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -154,6 +175,10 @@
 		413B91662BCB0B1E00884452 /* EditLocationView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditLocationView-ViewModel.swift"; sourceTree = "<group>"; };
 		413B91682BCB0CCF00884452 /* WikiEditLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiEditLocationView.swift; sourceTree = "<group>"; };
 		4148B0422BFE9CAF00453452 /* InlineNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineNavigationBar.swift; sourceTree = "<group>"; };
+		4148B0482BFEA18500453452 /* JournalWidgetMacExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JournalWidgetMacExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4148B0502BFEA18700453452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4148B0522BFEA18700453452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4148B0532BFEA18700453452 /* JournalWidgetMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalWidgetMac.entitlements; sourceTree = "<group>"; };
 		414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexJournalWidget.swift; sourceTree = "<group>"; };
 		414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
 		414F5E912BA0DA710098C784 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -220,6 +245,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4148B0452BFEA18500453452 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4148B04A2BFEA18500453452 /* SwiftUI.framework in Frameworks */,
+				4148B0492BFEA18500453452 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41AD7C652BBCC3AB00800C7D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +281,7 @@
 				412D82FA2BBDE90000EB1995 /* JournalUITests */,
 				41B0FA6A2BC4861B00263C8B /* JournalWidget */,
 				41B0FA832BC489A100263C8B /* JournalWidgetExtension.entitlements */,
+				4148B04B2BFEA18500453452 /* JournalWidgetMac */,
 				41B0FA652BC4861B00263C8B /* Frameworks */,
 				412780D92B992D3C00EECEBA /* Products */,
 			);
@@ -259,6 +294,7 @@
 				41AD7C682BBCC3AB00800C7D /* JournalTests.xctest */,
 				412D82F92BBDE90000EB1995 /* JournalUITests.xctest */,
 				41B0FA642BC4861B00263C8B /* JournalWidgetExtension.appex */,
+				4148B0482BFEA18500453452 /* JournalWidgetMacExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -367,6 +403,16 @@
 				4148B0422BFE9CAF00453452 /* InlineNavigationBar.swift */,
 			);
 			path = PlatformAdjustments;
+			sourceTree = "<group>";
+		};
+		4148B04B2BFEA18500453452 /* JournalWidgetMac */ = {
+			isa = PBXGroup;
+			children = (
+				4148B0502BFEA18700453452 /* Assets.xcassets */,
+				4148B0522BFEA18700453452 /* Info.plist */,
+				4148B0532BFEA18700453452 /* JournalWidgetMac.entitlements */,
+			);
+			path = JournalWidgetMac;
 			sourceTree = "<group>";
 		};
 		41544ED22BCB1FE00086FED6 /* LocationView */ = {
@@ -580,6 +626,7 @@
 			);
 			dependencies = (
 				41B0FA732BC4861D00263C8B /* PBXTargetDependency */,
+				4148B0552BFEA18700453452 /* PBXTargetDependency */,
 			);
 			name = Journal;
 			productName = Journal;
@@ -603,6 +650,23 @@
 			productName = JournalUITests;
 			productReference = 412D82F92BBDE90000EB1995 /* JournalUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4148B0472BFEA18500453452 /* JournalWidgetMacExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4148B0572BFEA18700453452 /* Build configuration list for PBXNativeTarget "JournalWidgetMacExtension" */;
+			buildPhases = (
+				4148B0442BFEA18500453452 /* Sources */,
+				4148B0452BFEA18500453452 /* Frameworks */,
+				4148B0462BFEA18500453452 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JournalWidgetMacExtension;
+			productName = JournalWidgetMacExtension;
+			productReference = 4148B0482BFEA18500453452 /* JournalWidgetMacExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		41AD7C672BBCC3AB00800C7D /* JournalTests */ = {
 			isa = PBXNativeTarget;
@@ -646,7 +710,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					412780D72B992D3C00EECEBA = {
@@ -655,6 +719,9 @@
 					412D82F82BBDE90000EB1995 = {
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = 412780D72B992D3C00EECEBA;
+					};
+					4148B0472BFEA18500453452 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 					41AD7C672BBCC3AB00800C7D = {
 						CreatedOnToolsVersion = 15.3;
@@ -682,6 +749,7 @@
 				41AD7C672BBCC3AB00800C7D /* JournalTests */,
 				412D82F82BBDE90000EB1995 /* JournalUITests */,
 				41B0FA632BC4861B00263C8B /* JournalWidgetExtension */,
+				4148B0472BFEA18500453452 /* JournalWidgetMacExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -703,6 +771,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4148B0462BFEA18500453452 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4148B0512BFEA18700453452 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +865,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4148B0442BFEA18500453452 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4148B0622BFEA25F00453452 /* Main.xcdatamodeld in Sources */,
+				4148B05A2BFEA25600453452 /* SimpleJournalWidget.swift in Sources */,
+				4148B05B2BFEA25600453452 /* Filter.swift in Sources */,
+				4148B05C2BFEA25600453452 /* Entry-CoreDataHelpers.swift in Sources */,
+				4148B05D2BFEA25600453452 /* JournalWidgetBundle.swift in Sources */,
+				4148B05E2BFEA25600453452 /* DataController-StoreKit.swift in Sources */,
+				4148B05F2BFEA25600453452 /* Topic-CoreDataHelpers.swift in Sources */,
+				4148B0602BFEA25600453452 /* DataController.swift in Sources */,
+				4148B0612BFEA25600453452 /* ComplexJournalWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41AD7C642BBCC3AB00800C7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -827,6 +919,14 @@
 			target = 412780D72B992D3C00EECEBA /* Journal */;
 			targetProxy = 412D82FF2BBDE90000EB1995 /* PBXContainerItemProxy */;
 		};
+		4148B0552BFEA18700453452 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				macos,
+			);
+			target = 4148B0472BFEA18500453452 /* JournalWidgetMacExtension */;
+			targetProxy = 4148B0542BFEA18700453452 /* PBXContainerItemProxy */;
+		};
 		41AD7C6D2BBCC3AB00800C7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 412780D72B992D3C00EECEBA /* Journal */;
@@ -834,6 +934,7 @@
 		};
 		41B0FA732BC4861D00263C8B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 41B0FA632BC4861B00263C8B /* JournalWidgetExtension */;
 			targetProxy = 41B0FA722BC4861D00263C8B /* PBXContainerItemProxy */;
 		};
@@ -1081,6 +1182,66 @@
 			};
 			name = Release;
 		};
+		4148B0582BFEA18700453452 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = JournalWidgetMac/JournalWidgetMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CWCBRR328H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JournalWidgetMac/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JournalWidgetMac;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BJ914.Journal.JournalWidgetMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4148B0592BFEA18700453452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = JournalWidgetMac/JournalWidgetMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CWCBRR328H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JournalWidgetMac/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JournalWidgetMac;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BJ914.Journal.JournalWidgetMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		41AD7C6F2BBCC3AB00800C7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1211,6 +1372,15 @@
 			buildConfigurations = (
 				412D83022BBDE90000EB1995 /* Debug */,
 				412D83032BBDE90000EB1995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4148B0572BFEA18700453452 /* Build configuration list for PBXNativeTarget "JournalWidgetMacExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4148B0582BFEA18700453452 /* Debug */,
+				4148B0592BFEA18700453452 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
