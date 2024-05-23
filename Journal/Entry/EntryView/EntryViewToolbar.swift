@@ -4,21 +4,24 @@
 //
 //  Created by Brandon Johns on 3/13/24.
 //
-
+#if canImport(CoreHaptics)
 import CoreHaptics
+#endif
 import SwiftUI
 
 struct EntryViewToolbar: View {
     @EnvironmentObject var dataController: DataController
     @ObservedObject var entry: EntryJournal
     
+#if canImport(CoreHaptics)
     @State private var engine = try? CHHapticEngine()
-    
+    #endif
     var openCloseButtonText: LocalizedStringKey {
         entry.completed ? "Re-open Entry" : "Close Entry"
     }
     
     var body: some View {
+#if !os(watchOS)
         Menu {
             Button("Copy Entry Name", systemImage: "doc.on.doc", action: copyToClipboard)
             
@@ -36,12 +39,14 @@ struct EntryViewToolbar: View {
         } label: {
             Label("Actions", systemImage: "ellipsis.circle")
         }
+        #endif 
     }
     
     func toggleCompleted() {
         entry.completed.toggle()
         dataController.save()
         
+#if canImport(CoreHaptics)
         if entry.completed {
             do {
                 try engine?.start()
@@ -78,12 +83,13 @@ struct EntryViewToolbar: View {
                 // playing haptics didn't work, but that's okay
             }
         }
+        #endif
     }
     
     func copyToClipboard() {
         #if os(iOS)
         UIPasteboard.general.string = entry.entryName
-        #else
+        #elseif os(macOS)
         NSPasteboard.general.prepareForNewContents()
         NSPasteboard.general.setString(entry.entryName, forType: .string)
         #endif

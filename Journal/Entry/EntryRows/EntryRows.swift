@@ -28,7 +28,9 @@ struct EntryRows: View {
                     Text(viewModel.entryTopicsList)
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
-                        .foregroundStyle(.lightBlue)
+                
+                        .foregroundStyle(.cyan)
+                    
                 }
                 Spacer()
                 
@@ -41,7 +43,9 @@ struct EntryRows: View {
                     if viewModel.completed {
                         Text("Closed")
                             .font(.body.smallCaps())
-                            .foregroundStyle(.gold)
+                          
+                            .foregroundStyle(.yellow)
+                        
                     } else {
                         Text("Open")
                             .font(.body.smallCaps())

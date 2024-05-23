@@ -29,8 +29,9 @@ class DataController: ObservableObject {
     ///Loads/Stores/Syncs local data with iCloud
     let container: NSPersistentCloudKitContainer
     
+#if !os(watchOS)
     var spotlightDelegate: NSCoreDataCoreSpotlightDelegate?
-    
+    #endif
     /// The UserDefaults suite where we're saving user data.
     let defaults: UserDefaults
     
@@ -150,6 +151,7 @@ class DataController: ObservableObject {
             if let description = self?.container.persistentStoreDescriptions.first {
                 description.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
                 
+                #if !os(watchOS)
                 if let coordinator = self?.container.persistentStoreCoordinator {
                     self?.spotlightDelegate = NSCoreDataCoreSpotlightDelegate(
                         forStoreWith: description,
@@ -158,6 +160,7 @@ class DataController: ObservableObject {
 
                     self?.spotlightDelegate?.startSpotlightIndexing()
                 }
+                #endif 
             }
 
             #if DEBUG

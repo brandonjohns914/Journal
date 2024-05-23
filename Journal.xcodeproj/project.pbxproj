@@ -48,6 +48,53 @@
 		4148B0622BFEA25F00453452 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 412780F32B992FA800EECEBA /* Main.xcdatamodeld */; };
 		4148B0642BFEA72300453452 /* MacFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0632BFEA72300453452 /* MacFrame.swift */; };
 		4148B0662BFEAB3000453452 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4148B0652BFEAB3000453452 /* Credits.rtf */; };
+		4148B0672BFF964700453452 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 412780EE2B992EE900EECEBA /* Localizable.strings */; };
+		4148B0762BFFF08300453452 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4148B0752BFFF08300453452 /* Preview Assets.xcassets */; };
+		4148B0792BFFF08300453452 /* JournalWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4148B06C2BFFF08100453452 /* JournalWatch Watch App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4148B07E2BFFF16D00453452 /* JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412780DB2B992D3C00EECEBA /* JournalApp.swift */; };
+		4148B07F2BFFF17B00453452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412780DF2B992D3D00EECEBA /* Assets.xcassets */; };
+		4148B0802BFFF17B00453452 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41AD7C742BBCC92500800C7D /* Colors.xcassets */; };
+		4148B0812BFFF18000453452 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 412780F32B992FA800EECEBA /* Main.xcdatamodeld */; };
+		4148B0822BFFF18900453452 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 412780EE2B992EE900EECEBA /* Localizable.strings */; };
+		4148B0832BFFF19000453452 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 412780F02B992EEF00EECEBA /* Awards.json */; };
+		4148B0842BFFF26E00453452 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781132B9A52AB00EECEBA /* DataController.swift */; };
+		4148B0852BFFF27200453452 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881172BC0CED100BBACF7 /* DataController-StoreKit.swift */; };
+		4148B0862BFFF27500453452 /* DataController-Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881142BC0AE8300BBACF7 /* DataController-Notifications.swift */; };
+		4148B0872BFFF27900453452 /* DataController-Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA812BC4886200263C8B /* DataController-Awards.swift */; };
+		4148B0882BFFF2B700453452 /* FaceIDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FAAE2BC5DB4E00263C8B /* FaceIDViewModel.swift */; };
+		4148B0892BFFF2B700453452 /* FaceIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FAAC2BC5DB4200263C8B /* FaceIDAuthentication.swift */; };
+		4148B08A2BFFF2C200453452 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */; };
+		4148B08B2BFFF2C200453452 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881092BBF31EF00BBACF7 /* ContentViewModel.swift */; };
+		4148B08C2BFFF2C200453452 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412780DD2B992D3C00EECEBA /* ContentView.swift */; };
+		4148B08D2BFFF2CE00453452 /* EntryRowsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881102BBF4DA900BBACF7 /* EntryRowsViewModel.swift */; };
+		4148B08E2BFFF2CE00453452 /* EntryViewNameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C26D202BCA003100FA98E9 /* EntryViewNameChange.swift */; };
+		4148B08F2BFFF2CE00453452 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781172B9A617E00EECEBA /* DetailView.swift */; };
+		4148B0902BFFF2CE00453452 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781242B9A8CBB00EECEBA /* EntryView.swift */; };
+		4148B0912BFFF2CE00453452 /* EntryViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AC04082BA2709E001DAB12 /* EntryViewToolbar.swift */; };
+		4148B0922BFFF2CE00453452 /* NoEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781222B9A8BCC00EECEBA /* NoEntryView.swift */; };
+		4148B0932BFFF2CE00453452 /* EntryRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781202B9A869600EECEBA /* EntryRows.swift */; };
+		4148B0942BFFF2CE00453452 /* EntryViewReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C26D222BCA013100FA98E9 /* EntryViewReminders.swift */; };
+		4148B0952BFFF2D800453452 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781192B9A61C400EECEBA /* Filter.swift */; };
+		4148B0962BFFF2D800453452 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881052BBE13AF00BBACF7 /* MainViewModel.swift */; };
+		4148B0972BFFF2D800453452 /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7C5E2BBCBDB100800C7D /* UserFilterRow.swift */; };
+		4148B0982BFFF2D800453452 /* MainViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AC04062BA246E7001DAB12 /* MainViewToolbar.swift */; };
+		4148B0992BFFF2D800453452 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781152B9A616C00EECEBA /* MainView.swift */; };
+		4148B09A2BFFF2D800453452 /* InlineNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0422BFE9CAF00453452 /* InlineNavigationBar.swift */; };
+		4148B09B2BFFF2D800453452 /* SmartFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AC040C2BA271D7001DAB12 /* SmartFilterRow.swift */; };
+		4148B09C2BFFF2D800453452 /* MacFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0632BFEA72300453452 /* MacFrame.swift */; };
+		4148B09D2BFFF2D800453452 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881192BC0D27E00BBACF7 /* StoreView.swift */; };
+		4148B09E2BFFF2DE00453452 /* TopicsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AC040A2BA27129001DAB12 /* TopicsMenuView.swift */; };
+		4148B09F2BFFF2DE00453452 /* MissingTopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AC040E2BA38CC5001DAB12 /* MissingTopicView.swift */; };
+		4148B0A02BFFF2E800453452 /* Entry-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127811B2B9A75E700EECEBA /* Entry-CoreDataHelpers.swift */; };
+		4148B0A12BFFF2E800453452 /* Topic-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127811E2B9A7D7E00EECEBA /* Topic-CoreDataHelpers.swift */; };
+		4148B0A22BFFF2E800453452 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E912BA0DA710098C784 /* Bundle-Decodable.swift */; };
+		4148B0A32BFFF2E800453452 /* Location-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E487572BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift */; };
+		4148B0A42BFFF31A00453452 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E972BA0DCB10098C784 /* AwardsView.swift */; };
+		4148B0A52BFFF31A00453452 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E952BA0DAC60098C784 /* Award.swift */; };
+		4148B0A62BFFF32200453452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415863872BC1F28B00741128 /* AppDelegate.swift */; };
+		4148B0A72BFFF32200453452 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415863892BC1F29B00741128 /* SceneDelegate.swift */; };
+		4148B0A92BFFF54900453452 /* NumberBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0A82BFFF54900453452 /* NumberBadge.swift */; };
+		4148B0AA2BFFF59C00453452 /* NumberBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0A82BFFF54900453452 /* NumberBadge.swift */; };
 		414D0B822BFD49D200E14B7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 412780EE2B992EE900EECEBA /* Localizable.strings */; };
 		414D0B842BFD4B3A00E14B7D /* ComplexJournalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */; };
 		414F5E8E2BA0D0B50098C784 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */; };
@@ -115,6 +162,13 @@
 			remoteGlobalIDString = 4148B0472BFEA18500453452;
 			remoteInfo = JournalWidgetMacExtension;
 		};
+		4148B0772BFFF08300453452 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 412780D02B992D3C00EECEBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4148B06B2BFFF08100453452;
+			remoteInfo = "JournalWatch Watch App";
+		};
 		41AD7C6C2BBCC3AB00800C7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 412780D02B992D3C00EECEBA /* Project object */;
@@ -132,6 +186,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4148B07D2BFFF08300453452 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4148B0792BFFF08300453452 /* JournalWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41B0FA752BC4861E00263C8B /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,6 +248,10 @@
 		4148B0532BFEA18700453452 /* JournalWidgetMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalWidgetMac.entitlements; sourceTree = "<group>"; };
 		4148B0632BFEA72300453452 /* MacFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacFrame.swift; sourceTree = "<group>"; };
 		4148B0652BFEAB3000453452 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		4148B06C2BFFF08100453452 /* JournalWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JournalWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4148B0752BFFF08300453452 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4148B0A82BFFF54900453452 /* NumberBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberBadge.swift; sourceTree = "<group>"; };
+		4148B0AB2BFFF71F00453452 /* JournalWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "JournalWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexJournalWidget.swift; sourceTree = "<group>"; };
 		414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
 		414F5E912BA0DA710098C784 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -258,6 +327,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4148B0692BFFF08100453452 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41AD7C652BBCC3AB00800C7D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,13 +356,13 @@
 		412780CF2B992D3C00EECEBA = {
 			isa = PBXGroup;
 			children = (
-				4148B0652BFEAB3000453452 /* Credits.rtf */,
 				412780DA2B992D3C00EECEBA /* Journal */,
 				41AD7C692BBCC3AB00800C7D /* JournalTests */,
 				412D82FA2BBDE90000EB1995 /* JournalUITests */,
 				41B0FA6A2BC4861B00263C8B /* JournalWidget */,
 				41B0FA832BC489A100263C8B /* JournalWidgetExtension.entitlements */,
 				4148B04B2BFEA18500453452 /* JournalWidgetMac */,
+				4148B06D2BFFF08100453452 /* JournalWatch Watch App */,
 				41B0FA652BC4861B00263C8B /* Frameworks */,
 				412780D92B992D3C00EECEBA /* Products */,
 			);
@@ -300,6 +376,7 @@
 				412D82F92BBDE90000EB1995 /* JournalUITests.xctest */,
 				41B0FA642BC4861B00263C8B /* JournalWidgetExtension.appex */,
 				4148B0482BFEA18500453452 /* JournalWidgetMacExtension.appex */,
+				4148B06C2BFFF08100453452 /* JournalWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,6 +416,7 @@
 		412780EB2B992E1400EECEBA /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				4148B0652BFEAB3000453452 /* Credits.rtf */,
 				417881162BC0CCE400BBACF7 /* Configuration.storekit */,
 				41AD7C742BBCC92500800C7D /* Colors.xcassets */,
 				412780F32B992FA800EECEBA /* Main.xcdatamodeld */,
@@ -406,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				4148B0422BFE9CAF00453452 /* InlineNavigationBar.swift */,
+				4148B0A82BFFF54900453452 /* NumberBadge.swift */,
 				4148B0632BFEA72300453452 /* MacFrame.swift */,
 			);
 			path = PlatformAdjustments;
@@ -419,6 +498,23 @@
 				4148B0532BFEA18700453452 /* JournalWidgetMac.entitlements */,
 			);
 			path = JournalWidgetMac;
+			sourceTree = "<group>";
+		};
+		4148B06D2BFFF08100453452 /* JournalWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				4148B0AB2BFFF71F00453452 /* JournalWatch Watch App.entitlements */,
+				4148B0742BFFF08300453452 /* Preview Content */,
+			);
+			path = "JournalWatch Watch App";
+			sourceTree = "<group>";
+		};
+		4148B0742BFFF08300453452 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4148B0752BFFF08300453452 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		41544ED22BCB1FE00086FED6 /* LocationView */ = {
@@ -627,12 +723,14 @@
 				412780D52B992D3C00EECEBA /* Frameworks */,
 				412780D62B992D3C00EECEBA /* Resources */,
 				41B0FA752BC4861E00263C8B /* Embed Foundation Extensions */,
+				4148B07D2BFFF08300453452 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				41B0FA732BC4861D00263C8B /* PBXTargetDependency */,
 				4148B0552BFEA18700453452 /* PBXTargetDependency */,
+				4148B0782BFFF08300453452 /* PBXTargetDependency */,
 			);
 			name = Journal;
 			productName = Journal;
@@ -673,6 +771,23 @@
 			productName = JournalWidgetMacExtension;
 			productReference = 4148B0482BFEA18500453452 /* JournalWidgetMacExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		4148B06B2BFFF08100453452 /* JournalWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4148B07A2BFFF08300453452 /* Build configuration list for PBXNativeTarget "JournalWatch Watch App" */;
+			buildPhases = (
+				4148B0682BFFF08100453452 /* Sources */,
+				4148B0692BFFF08100453452 /* Frameworks */,
+				4148B06A2BFFF08100453452 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JournalWatch Watch App";
+			productName = "JournalWatch Watch App";
+			productReference = 4148B06C2BFFF08100453452 /* JournalWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
 		};
 		41AD7C672BBCC3AB00800C7D /* JournalTests */ = {
 			isa = PBXNativeTarget;
@@ -729,6 +844,9 @@
 					4148B0472BFEA18500453452 = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					4148B06B2BFFF08100453452 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					41AD7C672BBCC3AB00800C7D = {
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = 412780D72B992D3C00EECEBA;
@@ -756,6 +874,7 @@
 				412D82F82BBDE90000EB1995 /* JournalUITests */,
 				41B0FA632BC4861B00263C8B /* JournalWidgetExtension */,
 				4148B0472BFEA18500453452 /* JournalWidgetMacExtension */,
+				4148B06B2BFFF08100453452 /* JournalWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -786,6 +905,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4148B0512BFEA18700453452 /* Assets.xcassets in Resources */,
+				4148B0672BFF964700453452 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4148B06A2BFFF08100453452 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4148B0762BFFF08300453452 /* Preview Assets.xcassets in Resources */,
+				4148B0832BFFF19000453452 /* Awards.json in Resources */,
+				4148B0822BFFF18900453452 /* Localizable.strings in Resources */,
+				4148B07F2BFFF17B00453452 /* Assets.xcassets in Resources */,
+				4148B0802BFFF17B00453452 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +986,7 @@
 				41B0FAAF2BC5DB4E00263C8B /* FaceIDViewModel.swift in Sources */,
 				417881182BC0CED100BBACF7 /* DataController-StoreKit.swift in Sources */,
 				412780DC2B992D3C00EECEBA /* JournalApp.swift in Sources */,
+				4148B0A92BFFF54900453452 /* NumberBadge.swift in Sources */,
 				414F5E962BA0DAC60098C784 /* Award.swift in Sources */,
 				41E487582BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift in Sources */,
 				41C26D212BCA003100FA98E9 /* EntryViewNameChange.swift in Sources */,
@@ -886,6 +1019,52 @@
 				4148B05F2BFEA25600453452 /* Topic-CoreDataHelpers.swift in Sources */,
 				4148B0602BFEA25600453452 /* DataController.swift in Sources */,
 				4148B0612BFEA25600453452 /* ComplexJournalWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4148B0682BFFF08100453452 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4148B0882BFFF2B700453452 /* FaceIDViewModel.swift in Sources */,
+				4148B0892BFFF2B700453452 /* FaceIDAuthentication.swift in Sources */,
+				4148B0852BFFF27200453452 /* DataController-StoreKit.swift in Sources */,
+				4148B0862BFFF27500453452 /* DataController-Notifications.swift in Sources */,
+				4148B0A62BFFF32200453452 /* AppDelegate.swift in Sources */,
+				4148B0A72BFFF32200453452 /* SceneDelegate.swift in Sources */,
+				4148B08A2BFFF2C200453452 /* ContentViewToolbar.swift in Sources */,
+				4148B08B2BFFF2C200453452 /* ContentViewModel.swift in Sources */,
+				4148B08C2BFFF2C200453452 /* ContentView.swift in Sources */,
+				4148B0812BFFF18000453452 /* Main.xcdatamodeld in Sources */,
+				4148B0872BFFF27900453452 /* DataController-Awards.swift in Sources */,
+				4148B0842BFFF26E00453452 /* DataController.swift in Sources */,
+				4148B07E2BFFF16D00453452 /* JournalApp.swift in Sources */,
+				4148B09E2BFFF2DE00453452 /* TopicsMenuView.swift in Sources */,
+				4148B09F2BFFF2DE00453452 /* MissingTopicView.swift in Sources */,
+				4148B08D2BFFF2CE00453452 /* EntryRowsViewModel.swift in Sources */,
+				4148B08E2BFFF2CE00453452 /* EntryViewNameChange.swift in Sources */,
+				4148B08F2BFFF2CE00453452 /* DetailView.swift in Sources */,
+				4148B0A02BFFF2E800453452 /* Entry-CoreDataHelpers.swift in Sources */,
+				4148B0A12BFFF2E800453452 /* Topic-CoreDataHelpers.swift in Sources */,
+				4148B0A22BFFF2E800453452 /* Bundle-Decodable.swift in Sources */,
+				4148B0A32BFFF2E800453452 /* Location-CoreDataHelpers.swift in Sources */,
+				4148B0902BFFF2CE00453452 /* EntryView.swift in Sources */,
+				4148B0912BFFF2CE00453452 /* EntryViewToolbar.swift in Sources */,
+				4148B0922BFFF2CE00453452 /* NoEntryView.swift in Sources */,
+				4148B0932BFFF2CE00453452 /* EntryRows.swift in Sources */,
+				4148B0952BFFF2D800453452 /* Filter.swift in Sources */,
+				4148B0962BFFF2D800453452 /* MainViewModel.swift in Sources */,
+				4148B0972BFFF2D800453452 /* UserFilterRow.swift in Sources */,
+				4148B0982BFFF2D800453452 /* MainViewToolbar.swift in Sources */,
+				4148B0992BFFF2D800453452 /* MainView.swift in Sources */,
+				4148B09A2BFFF2D800453452 /* InlineNavigationBar.swift in Sources */,
+				4148B09B2BFFF2D800453452 /* SmartFilterRow.swift in Sources */,
+				4148B09C2BFFF2D800453452 /* MacFrame.swift in Sources */,
+				4148B0AA2BFFF59C00453452 /* NumberBadge.swift in Sources */,
+				4148B09D2BFFF2D800453452 /* StoreView.swift in Sources */,
+				4148B0942BFFF2CE00453452 /* EntryViewReminders.swift in Sources */,
+				4148B0A42BFFF31A00453452 /* AwardsView.swift in Sources */,
+				4148B0A52BFFF31A00453452 /* Award.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -934,6 +1113,12 @@
 			);
 			target = 4148B0472BFEA18500453452 /* JournalWidgetMacExtension */;
 			targetProxy = 4148B0542BFEA18700453452 /* PBXContainerItemProxy */;
+		};
+		4148B0782BFFF08300453452 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 4148B06B2BFFF08100453452 /* JournalWatch Watch App */;
+			targetProxy = 4148B0772BFFF08300453452 /* PBXContainerItemProxy */;
 		};
 		41AD7C6D2BBCC3AB00800C7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1250,6 +1435,71 @@
 			};
 			name = Release;
 		};
+		4148B07B2BFFF08300453452 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "JournalWatch Watch App/JournalWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"JournalWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = CWCBRR328H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = JournalWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = BJ914.Journal;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BJ914.Journal.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		4148B07C2BFFF08300453452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "JournalWatch Watch App/JournalWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"JournalWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = CWCBRR328H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = JournalWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = BJ914.Journal;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BJ914.Journal.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 		41AD7C6F2BBCC3AB00800C7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1389,6 +1639,15 @@
 			buildConfigurations = (
 				4148B0582BFEA18700453452 /* Debug */,
 				4148B0592BFEA18700453452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4148B07A2BFFF08300453452 /* Build configuration list for PBXNativeTarget "JournalWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4148B07B2BFFF08300453452 /* Debug */,
+				4148B07C2BFFF08300453452 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

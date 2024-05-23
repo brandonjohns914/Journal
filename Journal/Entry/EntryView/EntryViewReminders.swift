@@ -30,7 +30,7 @@ struct EntryViewReminders: View {
             SettingsLink {
                 Text("Check Settings")
             }
-            #else
+            #elseif os(iOS)
             Button("Check Settings", action: showAppSettings)
             #endif
             Button("Cancel", role: .cancel) { }

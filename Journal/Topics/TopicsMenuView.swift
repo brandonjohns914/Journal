@@ -11,6 +11,9 @@ struct TopicsMenuView: View {
     @EnvironmentObject var dataController: DataController
     @ObservedObject var entry: EntryJournal
     var body: some View {
+#if os(watchOS)
+        LabeledContent("Topics", value: entry.entryTopicsList)
+        #else
         Menu {
             // selected topics
             ForEach(entry.entryTopics) { topic in
@@ -35,6 +38,7 @@ struct TopicsMenuView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .animation(nil, value: entry.entryTopicsList)
         }
+        #endif 
     }
 }
 

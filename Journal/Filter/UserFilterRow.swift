@@ -15,7 +15,7 @@ struct UserFilterRow: View {
         NavigationLink(value: filter) {
             Label(filter.name, systemImage: filter.icon)
                 .foregroundStyle(.green)
-                .badge(filter.activeEntriesCount)
+                .numberBadge(filter.activeEntriesCount)
                 .contextMenu{
                     Button {
                         rename(filter)
