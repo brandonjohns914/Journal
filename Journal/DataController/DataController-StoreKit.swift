@@ -55,14 +55,8 @@ extension DataController {
         }
     }
     
-    func purchase(_ product: Product) async throws {
-        let result = try await product.purchase()
 
-        if case let .success(validation) = result {
-            try await finalize(validation.payloadValue)
-        }
-    }
-
+    
     @MainActor
     func loadProducts() async throws {
         // don't load products more than once

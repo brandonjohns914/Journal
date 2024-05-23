@@ -98,6 +98,7 @@ struct EntryViewToolbar: View {
 
 #Preview {
     EntryViewToolbar(entry: EntryJournal.example)
+        .environmentObject(DataController(inMemory: true))
 }
 
 

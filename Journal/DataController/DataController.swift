@@ -10,7 +10,9 @@ import CoreData
 import PhotosUI
 import SwiftUI
 import StoreKit
+#if canImport(WidgetKit)
 import WidgetKit
+#endif 
 import MapKit
 
 enum SortType: String {
@@ -163,15 +165,8 @@ class DataController: ObservableObject {
                 #endif 
             }
 
-            #if DEBUG
-            if CommandLine.arguments.contains("enable-testing") {
-          
-                self?.deleteAll()
-                #if os(iOS)
-                UIView.setAnimationsEnabled(false)
-                #endif 
-            }
-            #endif
+            self?.checkForTestEnvironment()
+            
         }
     }
     /// Creates sample data that can be used for testing purposes
@@ -214,21 +209,23 @@ class DataController: ObservableObject {
         if container.viewContext.hasChanges {
             try? container.viewContext.save()
             /// forces all widget to update 
+            #if canImport(WidgetKit)
             WidgetCenter.shared.reloadAllTimelines()
+            #endif 
         }
     }
     
-    /// Waits three seconds before calling save.
-    func queueSave() {
-        saveTask?.cancel()
-        
-        saveTask = Task { @MainActor in
-            print("Queueing Save")
-            try await Task.sleep(for: .seconds(3))
-            save()
-            print("Saved!")
-        }
-    }
+//    /// Waits three seconds before calling save.
+//    func queueSave() {
+//        saveTask?.cancel()
+//        
+//        saveTask = Task { @MainActor in
+//            print("Queueing Save")
+//            try await Task.sleep(for: .seconds(3))
+//            save()
+//            print("Saved!")
+//        }
+//    }
     
     
     /// Delete a specific Entry or Topic from the viewContext

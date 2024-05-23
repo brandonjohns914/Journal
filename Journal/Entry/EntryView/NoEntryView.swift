@@ -21,4 +21,5 @@ struct NoEntryView: View {
 
 #Preview {
     NoEntryView()
+        .environmentObject(DataController(inMemory: true))
 }

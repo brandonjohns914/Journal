@@ -56,7 +56,7 @@ struct EntryView: View {
             .formStyle(.grouped)
             .disabled(entry.isDeleted)
             .onReceive(entry.objectWillChange) { _ in
-                dataController.queueSave()
+                dataController.save()
             }
             .onSubmit(dataController.save)
             .toolbar {
@@ -70,6 +70,7 @@ struct EntryView: View {
 
 }
 
-//#Preview {
-//    EntryView(entry: .example)
-//}
+#Preview {
+    EntryView(entry: .example)
+        .environmentObject(DataController(inMemory: true))
+}

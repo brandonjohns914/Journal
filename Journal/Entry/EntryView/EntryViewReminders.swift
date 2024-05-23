@@ -37,12 +37,9 @@ struct EntryViewReminders: View {
         } message: {
             Text("There was a problem setting your notification. Please check you have notifications enabled.")
         }
-        .onChange(of: entry.reminderEnabled) { _,_ in
-            updateReminder()
-        }
-        .onChange(of: entry.reminderTime) { _,_  in
-            updateReminder()
-        }
+        .onChange(of: entry.reminderEnabled, updateReminder)
+        
+        .onChange(of: entry.reminderTime,  updateReminder)
     }
     
     #if os(iOS)
@@ -71,6 +68,7 @@ struct EntryViewReminders: View {
     }
 }
 
-//#Preview {
-//    EntryViewReminders()
-//}
+#Preview {
+    EntryViewReminders(entry: .example)
+        .environmentObject(DataController(inMemory: true))
+}

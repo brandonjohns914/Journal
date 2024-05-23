@@ -99,6 +99,10 @@
 		4148B0AE2BFFFB1D00453452 /* EntryRowWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0AC2BFFFB1D00453452 /* EntryRowWatch.swift */; };
 		4148B0B02BFFFCEA00453452 /* ToolbarItemPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0AF2BFFFCEA00453452 /* ToolbarItemPlacement.swift */; };
 		4148B0B12BFFFCEA00453452 /* ToolbarItemPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0AF2BFFFCEA00453452 /* ToolbarItemPlacement.swift */; };
+		4148B0B32C00053C00453452 /* DataController-Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0B22C00053C00453452 /* DataController-Testing.swift */; };
+		4148B0B42C00053C00453452 /* DataController-Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0B22C00053C00453452 /* DataController-Testing.swift */; };
+		4148B0B52C00057C00453452 /* DataController-Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0B22C00053C00453452 /* DataController-Testing.swift */; };
+		4148B0B62C00057E00453452 /* DataController-Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0B22C00053C00453452 /* DataController-Testing.swift */; };
 		414D0B822BFD49D200E14B7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 412780EE2B992EE900EECEBA /* Localizable.strings */; };
 		414D0B842BFD4B3A00E14B7D /* ComplexJournalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */; };
 		414F5E8E2BA0D0B50098C784 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */; };
@@ -258,6 +262,7 @@
 		4148B0AB2BFFF71F00453452 /* JournalWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "JournalWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		4148B0AC2BFFFB1D00453452 /* EntryRowWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRowWatch.swift; sourceTree = "<group>"; };
 		4148B0AF2BFFFCEA00453452 /* ToolbarItemPlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemPlacement.swift; sourceTree = "<group>"; };
+		4148B0B22C00053C00453452 /* DataController-Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Testing.swift"; sourceTree = "<group>"; };
 		414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexJournalWidget.swift; sourceTree = "<group>"; };
 		414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
 		414F5E912BA0DA710098C784 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -647,6 +652,7 @@
 			isa = PBXGroup;
 			children = (
 				412781132B9A52AB00EECEBA /* DataController.swift */,
+				4148B0B22C00053C00453452 /* DataController-Testing.swift */,
 				417881172BC0CED100BBACF7 /* DataController-StoreKit.swift */,
 				417881142BC0AE8300BBACF7 /* DataController-Notifications.swift */,
 				41B0FA812BC4886200263C8B /* DataController-Awards.swift */,
@@ -998,6 +1004,7 @@
 				412780DC2B992D3C00EECEBA /* JournalApp.swift in Sources */,
 				4148B0A92BFFF54900453452 /* NumberBadge.swift in Sources */,
 				414F5E962BA0DAC60098C784 /* Award.swift in Sources */,
+				4148B0B32C00053C00453452 /* DataController-Testing.swift in Sources */,
 				41E487582BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift in Sources */,
 				41C26D212BCA003100FA98E9 /* EntryViewNameChange.swift in Sources */,
 				412781252B9A8CBB00EECEBA /* EntryView.swift in Sources */,
@@ -1024,6 +1031,7 @@
 				4148B05A2BFEA25600453452 /* SimpleJournalWidget.swift in Sources */,
 				4148B05B2BFEA25600453452 /* Filter.swift in Sources */,
 				4148B05C2BFEA25600453452 /* Entry-CoreDataHelpers.swift in Sources */,
+				4148B0B62C00057E00453452 /* DataController-Testing.swift in Sources */,
 				4148B05D2BFEA25600453452 /* JournalWidgetBundle.swift in Sources */,
 				4148B05E2BFEA25600453452 /* DataController-StoreKit.swift in Sources */,
 				4148B05F2BFEA25600453452 /* Topic-CoreDataHelpers.swift in Sources */,
@@ -1050,6 +1058,7 @@
 				4148B0842BFFF26E00453452 /* DataController.swift in Sources */,
 				4148B07E2BFFF16D00453452 /* JournalApp.swift in Sources */,
 				4148B09E2BFFF2DE00453452 /* TopicsMenuView.swift in Sources */,
+				4148B0B42C00053C00453452 /* DataController-Testing.swift in Sources */,
 				4148B09F2BFFF2DE00453452 /* MissingTopicView.swift in Sources */,
 				4148B08D2BFFF2CE00453452 /* EntryRowsViewModel.swift in Sources */,
 				4148B08E2BFFF2CE00453452 /* EntryViewNameChange.swift in Sources */,
@@ -1102,6 +1111,7 @@
 				414D0B842BFD4B3A00E14B7D /* ComplexJournalWidget.swift in Sources */,
 				41B0FA792BC4873100263C8B /* Main.xcdatamodeld in Sources */,
 				41B0FA7A2BC4874D00263C8B /* DataController.swift in Sources */,
+				4148B0B52C00057C00453452 /* DataController-Testing.swift in Sources */,
 				41B0FA6C2BC4861B00263C8B /* JournalWidgetBundle.swift in Sources */,
 				41B0FA802BC487EF00263C8B /* DataController-StoreKit.swift in Sources */,
 				41B0FA6E2BC4861B00263C8B /* SimpleJournalWidget.swift in Sources */,
@@ -1298,10 +1308,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BJ914.Journal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -1341,10 +1352,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BJ914.Journal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};

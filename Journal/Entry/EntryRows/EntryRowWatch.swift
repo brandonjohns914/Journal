@@ -30,4 +30,5 @@ struct EntryRowWatch: View {
 
 #Preview {
     EntryRowWatch(entry: .example)
+        .environmentObject(DataController(inMemory: true))
 }

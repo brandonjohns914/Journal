@@ -15,7 +15,12 @@ struct StoreView: View {
         case loading, loaded, error
     }
     
+   
+    @Environment(\.purchase) var purchaseAction
+ 
+    
     @EnvironmentObject var dataController: DataController
+  
     @Environment(\.dismiss) var dismiss
     @State private var loadState = LoadState.loading
     @State private var showingPurchaseError = false
@@ -111,10 +116,7 @@ struct StoreView: View {
             """)
         }
 
-        .onChange(of: dataController.fullVersionUnlocked) {
-            checkForPurchase()
-        }
-        
+        .onChange(of: dataController.fullVersionUnlocked, checkForPurchase)
         .task {
             await load()
         }
@@ -134,7 +136,13 @@ struct StoreView: View {
         }
         
         Task { @MainActor in
-            try await dataController.purchase(product)
+       
+            let result = try await purchaseAction(product)
+            if case let .success(validation) = result {
+                try await dataController.finalize(validation.payloadValue)
+            }
+            
+        
         }
     }
     

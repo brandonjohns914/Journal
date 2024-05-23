@@ -53,4 +53,5 @@ struct EntryViewNameChange: View {
 
 #Preview {
     EntryViewNameChange(entry: .example)
+        .environmentObject(DataController(inMemory: true))
 }

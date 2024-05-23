@@ -69,4 +69,5 @@ struct EntryRows: View {
 
 #Preview {
     EntryRows(entry: .example)
+        .environmentObject(DataController(inMemory: true))
 }
