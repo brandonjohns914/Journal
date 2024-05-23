@@ -56,11 +56,13 @@ struct AwardsView: View {
                 Text(selectedAward.description)
             }
             .navigationTitle("Awards")
+            #if !os(watchOS)
             .toolbar {
                 Button("Close") {
                     dismiss()
                 }
             }
+            #endif
         }
     }
     
