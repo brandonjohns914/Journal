@@ -95,6 +95,10 @@
 		4148B0A72BFFF32200453452 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415863892BC1F29B00741128 /* SceneDelegate.swift */; };
 		4148B0A92BFFF54900453452 /* NumberBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0A82BFFF54900453452 /* NumberBadge.swift */; };
 		4148B0AA2BFFF59C00453452 /* NumberBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0A82BFFF54900453452 /* NumberBadge.swift */; };
+		4148B0AD2BFFFB1D00453452 /* EntryRowWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0AC2BFFFB1D00453452 /* EntryRowWatch.swift */; };
+		4148B0AE2BFFFB1D00453452 /* EntryRowWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0AC2BFFFB1D00453452 /* EntryRowWatch.swift */; };
+		4148B0B02BFFFCEA00453452 /* ToolbarItemPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0AF2BFFFCEA00453452 /* ToolbarItemPlacement.swift */; };
+		4148B0B12BFFFCEA00453452 /* ToolbarItemPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148B0AF2BFFFCEA00453452 /* ToolbarItemPlacement.swift */; };
 		414D0B822BFD49D200E14B7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 412780EE2B992EE900EECEBA /* Localizable.strings */; };
 		414D0B842BFD4B3A00E14B7D /* ComplexJournalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */; };
 		414F5E8E2BA0D0B50098C784 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */; };
@@ -252,6 +256,8 @@
 		4148B0752BFFF08300453452 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4148B0A82BFFF54900453452 /* NumberBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberBadge.swift; sourceTree = "<group>"; };
 		4148B0AB2BFFF71F00453452 /* JournalWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "JournalWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		4148B0AC2BFFFB1D00453452 /* EntryRowWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRowWatch.swift; sourceTree = "<group>"; };
+		4148B0AF2BFFFCEA00453452 /* ToolbarItemPlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemPlacement.swift; sourceTree = "<group>"; };
 		414D0B832BFD4B3A00E14B7D /* ComplexJournalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexJournalWidget.swift; sourceTree = "<group>"; };
 		414F5E8D2BA0D0B50098C784 /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
 		414F5E912BA0DA710098C784 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -484,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				4148B0422BFE9CAF00453452 /* InlineNavigationBar.swift */,
+				4148B0AF2BFFFCEA00453452 /* ToolbarItemPlacement.swift */,
 				4148B0A82BFFF54900453452 /* NumberBadge.swift */,
 				4148B0632BFEA72300453452 /* MacFrame.swift */,
 			);
@@ -543,6 +550,7 @@
 			children = (
 				412781202B9A869600EECEBA /* EntryRows.swift */,
 				417881102BBF4DA900BBACF7 /* EntryRowsViewModel.swift */,
+				4148B0AC2BFFFB1D00453452 /* EntryRowWatch.swift */,
 			);
 			path = EntryRows;
 			sourceTree = "<group>";
@@ -976,8 +984,10 @@
 				414F5E982BA0DCB10098C784 /* AwardsView.swift in Sources */,
 				413B91692BCB0CCF00884452 /* WikiEditLocationView.swift in Sources */,
 				412781212B9A869600EECEBA /* EntryRows.swift in Sources */,
+				4148B0B02BFFFCEA00453452 /* ToolbarItemPlacement.swift in Sources */,
 				412781142B9A52AB00EECEBA /* DataController.swift in Sources */,
 				412780DE2B992D3C00EECEBA /* ContentView.swift in Sources */,
+				4148B0AD2BFFFB1D00453452 /* EntryRowWatch.swift in Sources */,
 				41AC040B2BA27129001DAB12 /* TopicsMenuView.swift in Sources */,
 				4148B0642BFEA72300453452 /* MacFrame.swift in Sources */,
 				412781162B9A616C00EECEBA /* MainView.swift in Sources */,
@@ -1062,9 +1072,11 @@
 				4148B09C2BFFF2D800453452 /* MacFrame.swift in Sources */,
 				4148B0AA2BFFF59C00453452 /* NumberBadge.swift in Sources */,
 				4148B09D2BFFF2D800453452 /* StoreView.swift in Sources */,
+				4148B0B12BFFFCEA00453452 /* ToolbarItemPlacement.swift in Sources */,
 				4148B0942BFFF2CE00453452 /* EntryViewReminders.swift in Sources */,
 				4148B0A42BFFF31A00453452 /* AwardsView.swift in Sources */,
 				4148B0A52BFFF31A00453452 /* Award.swift in Sources */,
+				4148B0AE2BFFFB1D00453452 /* EntryRowWatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

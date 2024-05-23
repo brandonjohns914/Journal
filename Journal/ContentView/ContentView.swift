@@ -19,7 +19,11 @@ struct ContentView: View {
     var body: some View {
         List(selection: $viewModel.selectedEntry) {
             ForEach(viewModel.dataController.entriesForSelectedFilter()) { entry in
+                #if os(watchOS)
+                EntryRowWatch(entry: entry)
+                #else
                 EntryRows(entry: entry)
+                #endif
             }
             .onDelete(perform: viewModel.delete)
         }
