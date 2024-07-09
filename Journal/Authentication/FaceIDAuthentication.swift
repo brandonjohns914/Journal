@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FaceIDAuthentication: View {
     @StateObject var viewModel: ViewModel
+    @State private var unlocked = false
     
     init(dataController: DataController) {
         let viewModel = ViewModel(dataController: dataController)
@@ -28,20 +29,10 @@ struct FaceIDAuthentication: View {
             } else  {
                 Group {
                     VStack {
-                        Text("Tap To Unlock")
-                            .font(.custom("San Francisco", size: 40))
-                        
-                            .foregroundStyle(.red)
-                            .font(.title)
-                            .fontWeight(.heavy)
-                        
-                            .padding()
-                        
-                        Image(systemName: "lock.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundStyle(AngularGradient(colors: [.gray, .black, .gray, .black, .gray], center: .center))
-                            .padding()
+                        Button("Unlock Your Journal", systemImage: "lock.shield", action: viewModel.authenticate)
+                        .symbolEffect(.bounce.down, value: unlocked)
+                        .font(.largeTitle)
+                        .foregroundStyle(.primary)
                         
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)

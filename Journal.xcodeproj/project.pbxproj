@@ -67,7 +67,6 @@
 		4148B08B2BFFF2C200453452 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881092BBF31EF00BBACF7 /* ContentViewModel.swift */; };
 		4148B08C2BFFF2C200453452 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412780DD2B992D3C00EECEBA /* ContentView.swift */; };
 		4148B08D2BFFF2CE00453452 /* EntryRowsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417881102BBF4DA900BBACF7 /* EntryRowsViewModel.swift */; };
-		4148B08E2BFFF2CE00453452 /* EntryViewNameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C26D202BCA003100FA98E9 /* EntryViewNameChange.swift */; };
 		4148B08F2BFFF2CE00453452 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781172B9A617E00EECEBA /* DetailView.swift */; };
 		4148B0902BFFF2CE00453452 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412781242B9A8CBB00EECEBA /* EntryView.swift */; };
 		4148B0912BFFF2CE00453452 /* EntryViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AC04082BA2709E001DAB12 /* EntryViewToolbar.swift */; };
@@ -150,7 +149,6 @@
 		41B0FA822BC4886300263C8B /* DataController-Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FA812BC4886200263C8B /* DataController-Awards.swift */; };
 		41B0FAAD2BC5DB4200263C8B /* FaceIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FAAC2BC5DB4200263C8B /* FaceIDAuthentication.swift */; };
 		41B0FAAF2BC5DB4E00263C8B /* FaceIDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0FAAE2BC5DB4E00263C8B /* FaceIDViewModel.swift */; };
-		41C26D212BCA003100FA98E9 /* EntryViewNameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C26D202BCA003100FA98E9 /* EntryViewNameChange.swift */; };
 		41C26D232BCA013100FA98E9 /* EntryViewReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C26D222BCA013100FA98E9 /* EntryViewReminders.swift */; };
 		41E487582BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E487572BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift */; };
 /* End PBXBuildFile section */
@@ -309,7 +307,6 @@
 		41B0FA832BC489A100263C8B /* JournalWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalWidgetExtension.entitlements; sourceTree = "<group>"; };
 		41B0FAAC2BC5DB4200263C8B /* FaceIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDAuthentication.swift; sourceTree = "<group>"; };
 		41B0FAAE2BC5DB4E00263C8B /* FaceIDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDViewModel.swift; sourceTree = "<group>"; };
-		41C26D202BCA003100FA98E9 /* EntryViewNameChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewNameChange.swift; sourceTree = "<group>"; };
 		41C26D222BCA013100FA98E9 /* EntryViewReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewReminders.swift; sourceTree = "<group>"; };
 		41E487572BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -565,7 +562,6 @@
 			children = (
 				412781242B9A8CBB00EECEBA /* EntryView.swift */,
 				41C26D222BCA013100FA98E9 /* EntryViewReminders.swift */,
-				41C26D202BCA003100FA98E9 /* EntryViewNameChange.swift */,
 				41AC04082BA2709E001DAB12 /* EntryViewToolbar.swift */,
 				412781222B9A8BCC00EECEBA /* NoEntryView.swift */,
 			);
@@ -1006,7 +1002,6 @@
 				414F5E962BA0DAC60098C784 /* Award.swift in Sources */,
 				4148B0B32C00053C00453452 /* DataController-Testing.swift in Sources */,
 				41E487582BC9C72300EDD8E8 /* Location-CoreDataHelpers.swift in Sources */,
-				41C26D212BCA003100FA98E9 /* EntryViewNameChange.swift in Sources */,
 				412781252B9A8CBB00EECEBA /* EntryView.swift in Sources */,
 				417881062BBE13AF00BBACF7 /* MainViewModel.swift in Sources */,
 				4178811A2BC0D27E00BBACF7 /* StoreView.swift in Sources */,
@@ -1061,7 +1056,6 @@
 				4148B0B42C00053C00453452 /* DataController-Testing.swift in Sources */,
 				4148B09F2BFFF2DE00453452 /* MissingTopicView.swift in Sources */,
 				4148B08D2BFFF2CE00453452 /* EntryRowsViewModel.swift in Sources */,
-				4148B08E2BFFF2CE00453452 /* EntryViewNameChange.swift in Sources */,
 				4148B08F2BFFF2CE00453452 /* DetailView.swift in Sources */,
 				4148B0A02BFFF2E800453452 /* Entry-CoreDataHelpers.swift in Sources */,
 				4148B0A12BFFF2E800453452 /* Topic-CoreDataHelpers.swift in Sources */,
