@@ -1,6 +1,5 @@
-# Journal
-Journal
-
+# Reflect
+Reflect
 
 This project is a journaling app where users can write whatever is on their mind. The app was written in SwiftUI. Uses Core Data to save all the entries to iCloud. The app syncs between iOS, macOS, watchOS, and VisionOS. 
 

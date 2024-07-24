@@ -29,7 +29,7 @@ struct FaceIDAuthentication: View {
             } else  {
                 Group {
                     VStack {
-                        Button("Unlock Your Journal", systemImage: "lock.shield", action: viewModel.authenticate)
+                        Button("Unlock Reflect", systemImage: "lock.shield", action: viewModel.authenticate)
                         .symbolEffect(.bounce.down, value: unlocked)
                         .font(.largeTitle)
                         .foregroundStyle(.primary)
